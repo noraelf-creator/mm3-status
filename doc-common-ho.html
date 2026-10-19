@@ -1,0 +1,440 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>共通HO｜マダミス3 超マダミスガールズX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f5f0;--paper:#fff;--ink:#1d1d1f;--sub:#6b6b72;--line:#e3dfd6;--red:#d0021b;--mag:#c2189b;--blue:#1d6fd6;--green:#178a4a;--soft:#fbf3f3}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.85 "Zen Kaku Gothic New","Yu Gothic UI","Meiryo",sans-serif}
+header.top{background:#000;color:#fff;padding:30px 24px 22px}
+header.top .in{max-width:1080px;margin:auto}
+header.top small{color:#ff5a6e;letter-spacing:.1em;font-weight:700}
+header.top h1{margin:4px 0 6px;font-size:30px;line-height:1.35}
+header.top h1 span{color:#ff2b47}
+header.top p{margin:0;color:#c9c9cf;font-size:14px}
+nav{position:sticky;top:0;z-index:5;background:rgba(0,0,0,.92);backdrop-filter:blur(6px)}
+nav .in{max-width:1080px;margin:auto;display:flex;gap:4px;overflow-x:auto;padding:0 16px}
+nav a{color:#ddd;text-decoration:none;padding:12px 16px;font-weight:700;white-space:nowrap;border-bottom:3px solid transparent}
+nav a:hover{color:#fff;border-color:#ff2b47}
+main{max-width:1080px;margin:auto;padding:10px 20px 80px}
+section.part{margin-top:46px}
+h2{font-size:26px;margin:0 0 6px;padding-bottom:6px;border-bottom:3px solid var(--ink)}
+h2 .no{color:var(--red);margin-right:8px}
+.lead{color:var(--sub);margin:4px 0 18px}
+h3{font-size:19px;margin:30px 0 10px;padding-left:10px;border-left:5px solid var(--red)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:14px 0;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.big{font-size:19px;line-height:1.9}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.st{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.st b{display:block;font-size:13px;color:var(--sub);font-weight:500}
+.st .v{font-size:17px;font-weight:700;margin:2px 0 4px}
+.st.ok{border-top:5px solid var(--green)}.st.wait{border-top:5px solid var(--mag)}.st.go{border-top:5px solid var(--blue)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:0 8px;border-radius:999px;margin-left:4px}
+.tag.ok{background:#e3f4ea;color:var(--green)}.tag.wait{background:#fbe5f4;color:var(--mag)}.tag.go{background:#e4eefb;color:var(--blue)}
+.tw{overflow-x:auto;margin:10px 0}
+table{border-collapse:collapse;width:100%;background:var(--paper);font-size:14.5px;line-height:1.7}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:#f1eee6;white-space:nowrap}
+table.cards td:first-child{font-weight:700;white-space:nowrap}
+table.acts td:first-child,table.sites td:first-child{font-weight:700;white-space:nowrap}
+.k{display:inline-block;font-size:12px;font-weight:700;border-radius:6px;padding:0 6px;margin:0 1px}
+.k1{background:var(--red);color:#fff}.km{background:#fff0c2;color:#8a5a00}.kw{background:#e8e4ff;color:#4b3cb0}.kn{background:#eee;color:#666}
+ol.chain{counter-reset:c;list-style:none;padding:0;margin:8px 0}
+ol.chain li{counter-increment:c;position:relative;padding:10px 12px 10px 52px;background:var(--paper);border:1px solid var(--line);border-radius:12px;margin:8px 0}
+ol.chain li::before{content:counter(c);position:absolute;left:12px;top:10px;width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;text-align:center;line-height:28px;font-weight:700}
+.time{display:grid;grid-template-columns:76px 1fr;gap:0;background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.time div{padding:9px 12px;border-bottom:1px solid var(--line)}
+.time .t{font:700 15px "IBM Plex Mono",Consolas,monospace;background:#faf8f3;color:var(--sub)}
+.time .death{background:var(--soft)}
+.time .t.death{color:var(--red)}
+.who{font-weight:700}
+.legend span{margin-right:12px;font-size:14px}
+.note{font-size:14px;color:var(--sub)}
+.secret{border:2px dashed var(--red);background:var(--soft)}
+.ex{background:#101014;color:#eee;border-radius:14px;padding:16px 18px}
+.ex b{color:#ff8c9b}
+.ex table{background:#18181d;color:#eee}.ex th{background:#26262c;color:#fff}.ex td,.ex th{border-color:#33333b}
+details{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:6px 14px;margin:10px 0}
+details summary{cursor:pointer;font-weight:700;padding:6px 0}
+code{font:13px "IBM Plex Mono",Consolas,monospace;background:#f1eee6;padding:0 4px;border-radius:4px}
+footer{max-width:1080px;margin:auto;padding:20px;color:var(--sub);font-size:13px}
+@media(max-width:640px){header.top h1{font-size:23px}h2{font-size:22px}body{font-size:15px}}
+
+body{display:block}
+.side{position:fixed;top:0;left:0;bottom:0;width:290px;background:#0b0b0d;color:#ddd;overflow-y:auto;padding:0 0 40px;z-index:20;border-right:1px solid #222}
+.side .brand{display:block;padding:18px 18px 14px;color:#fff;text-decoration:none;border-bottom:1px solid #222}
+.side .brand small{display:block;color:#ff5a6e;font-size:11px;letter-spacing:.1em;font-weight:700}
+.side .brand b{font-size:17px;line-height:1.4}
+.side .brand b span{color:#ff2b47}
+.side h4{margin:18px 18px 6px;font-size:12px;color:#8c8c95;letter-spacing:.08em}
+.side a.i{display:block;padding:6px 18px 6px 22px;color:#d6d6db;text-decoration:none;font-size:14px;line-height:1.5;border-left:3px solid transparent}
+.side a.i:hover{background:#18181c;color:#fff}
+.side a.i.on{background:#1d1d22;color:#fff;border-left-color:#ff2b47;font-weight:700}
+.wrap{margin-left:290px}
+.wrap header.top{padding:26px 28px 20px}
+.wrap main{padding:10px 28px 80px;max-width:1100px}
+.menu{display:none}
+.doc h1{font-size:26px;border-bottom:3px solid var(--ink);padding-bottom:6px}
+.doc h2{font-size:21px;border-bottom:2px solid var(--line);margin-top:34px}
+.doc h3{font-size:18px}
+.doc pre{background:#f1eee6;padding:12px;border-radius:10px;overflow-x:auto;font:14px/1.5 "IBM Plex Mono",Consolas,monospace}
+.doc table{display:block;overflow-x:auto}
+.doc blockquote{margin:12px 0;padding:8px 14px;border-left:4px solid var(--red);background:var(--soft)}
+.src{font-size:12px;color:var(--sub);margin:4px 0 14px}
+.story{border-radius:16px;padding:18px 20px;margin:16px 0;border:1px solid var(--line);background:var(--paper)}
+.story h3{margin-top:0}
+.story.s1{border-top:6px solid var(--blue)}.story.s2{border-top:6px solid var(--red)}.story.s3{border-top:6px solid var(--mag)}
+.layers{display:grid;gap:10px;margin:14px 0}
+.layer{border-radius:14px;padding:14px 16px;color:#fff}
+.layer b{font-size:17px}.layer.l1{background:#1d4f91}.layer.l2{background:#9b1022;margin:0 22px}.layer.l3{background:#7a1466;margin:0 44px}
+.imgs figure{margin:18px 0;background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.imgs img{display:block;width:100%;height:auto}
+.imgs figcaption{padding:8px 14px;font-size:14px;color:var(--sub)}
+@media(max-width:900px){
+ .side{transform:translateX(-100%);transition:transform .2s;width:84%;max-width:320px}
+ body.open .side{transform:none;box-shadow:0 0 0 100vmax rgba(0,0,0,.45)}
+ .wrap{margin-left:0}
+ .menu{display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:15;background:#000;color:#fff;padding:10px 14px}
+ .menu button{background:#ff2b47;color:#fff;border:0;border-radius:8px;font:700 15px inherit;padding:8px 12px}
+ .wrap header.top{padding:18px 16px}.wrap main{padding:6px 14px 60px}
+}
+</style></head><body>
+<nav class="side"><a class="brand" href="index.html"><small>作者用・真相を含む</small><b>マダミス3<br>超マダミスガールズ<span>X</span></b></a>
+<h4>まとめ</h4>
+<a class="i" href="index.html">いまの状況</a>
+<a class="i" href="structure.html">全体の骨格と3つの物語</a>
+<a class="i" href="skeleton.html">メイン推理の骨格</a>
+<a class="i" href="cards.html">カードの役割（一覧）</a>
+<a class="i" href="witch.html">魔女ゲーム</a>
+<a class="i" href="images.html">画像（立ち絵）</a>
+<h4>プレイヤー配布</h4>
+<a class="i on" href="doc-common-ho.html">共通HO</a>
+<a class="i" href="doc-ho-pc1.html">HO　PC1 アヤツジ</a>
+<a class="i" href="doc-ho-pc2.html">HO　PC2 アリスガワ</a>
+<a class="i" href="doc-ho-pc3.html">HO　PC3 ヨネザワ</a>
+<a class="i" href="doc-ho-pc4.html">HO　PC4 モリミ</a>
+<a class="i" href="doc-ho-pc5.html">HO　PC5 イサカ</a>
+<a class="i" href="doc-r01.html">R01 OP 校了会の始め方</a>
+<a class="i" href="doc-r02.html">R02 劇中 19:50の校了会</a>
+<a class="i" href="doc-r03.html">R03 劇中 20:30の発見</a>
+<a class="i" href="doc-answer-pc1.html">回答用紙　PC1 アヤツジ</a>
+<a class="i" href="doc-answer-pc2.html">回答用紙　PC2 アリスガワ</a>
+<a class="i" href="doc-answer-pc3.html">回答用紙　PC3 ヨネザワ</a>
+<a class="i" href="doc-answer-pc4.html">回答用紙　PC4 モリミ</a>
+<a class="i" href="doc-answer-pc5.html">回答用紙　PC5 イサカ</a>
+<a class="i" href="doc-howto.html">配布のしかた</a>
+<h4>カード（全文）</h4>
+<a class="i" href="doc-card-h.html">初期カード H01〜H10</a>
+<a class="i" href="doc-card-d1.html">D1　E01〜E10・SP01〜02</a>
+<a class="i" href="doc-card-d2.html">D2　E11〜E20・SP03〜04</a>
+<a class="i" href="doc-card-d3.html">D3　E21〜E30・SP05〜06</a>
+<a class="i" href="doc-card-d4.html">D4　E31〜E40・SP07〜08</a>
+<a class="i" href="doc-card-d5.html">D5　E41〜E50・SP09〜10</a>
+<a class="i" href="doc-card-c.html">共通カード C0〜C2</a>
+<a class="i" href="doc-m.html">アリスガワの頁 M1〜M3</a>
+<h4>GM資料</h4>
+<a class="i" href="doc-gm-guide.html">GM進行ガイド</a>
+<a class="i" href="doc-distribution.html">配布物一覧と配布タイミング</a>
+<a class="i" href="doc-r04.html">R04 真相解説</a>
+<a class="i" href="doc-r05.html">R05 ED そのXは私の地雷</a>
+<a class="i" href="doc-r06.html">R06 個別エピローグ</a>
+<a class="i" href="doc-answers-all.html">回答用紙（全PCの控え）</a>
+<a class="i" href="doc-truth.html">正本　真相</a>
+<a class="i" href="doc-timeline.html">正本　タイムライン</a>
+<a class="i" href="doc-characters.html">正本　キャラクター表</a>
+<a class="i" href="doc-cluemap.html">正本　手がかりマップ</a>
+<h4>制作の記録</h4>
+<a class="i" href="doc-project-master.html">PROJECT_MASTER（作品の入口）</a>
+<a class="i" href="doc-changelog.html">CHANGELOG（変更の履歴）</a>
+<a class="i" href="doc-decisions.html">作者の決定の記録（10/17〜）</a>
+</nav>
+<div class="wrap"><div class="menu"><button onclick="document.body.classList.toggle('open')">☰ 目次</button><span>マダミス3｜共通HO</span></div>
+<header class="top"><div class="in"><small>作者用・真相を含む（プレイヤーに見せない）</small><h1>共通HO</h1></div></header>
+<main><p class="src">原文：05_完成版/プレイヤー配布/00_共通HO.md</p><div class="doc"><h1 id="x-ho">超マダミスガールズX　共通HO（全員に配布）</h1>
+<blockquote>
+<p><strong>最初に読むのは §0〜§5 と、自分の個人HOだけでよい。</strong><br />
+魔女ゲームとカードの細かい処理（§6〜§9）は、R1とD1の直前にGMが早見表で案内する。その時に読めば間に合う。</p>
+</blockquote>
+<h2 id="0-1">0. 1枚でわかる早見表</h2>
+<table>
+<thead>
+<tr>
+<th>やること</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>進行</td>
+<td>OP → 個人HOを読む → 劇中の場面 → D0 → V1 → R1 → D1 → V2 → R2 → D2 → V3 → R3 → D3 → V4 → R4 → D4 → V5 → R5 → D5 → 回答記入 → 最終投票・回答 → 解説・ED</td>
+</tr>
+<tr>
+<td>V（疑惑投票）</td>
+<td>問いは毎回「<strong>アガサを殺害した犯人は誰だと思いますか？</strong>」。自分以外の一人へ一票。途中5回は1点、最終は5点。全て公開</td>
+</tr>
+<tr>
+<td>R（魔女ゲーム）</td>
+<td>魔女1人＋人間4人。人間は行き先、魔女は襲撃地点を一つずつ伏せて選び、同時に公開</td>
+</tr>
+<tr>
+<td>捕まった人間</td>
+<td>−5点。能力なし</td>
+</tr>
+<tr>
+<td>逃げた人間</td>
+<td>＋1点。選んだ地点の能力1回</td>
+</tr>
+<tr>
+<td>魔女</td>
+<td>捕まえた1人につき＋5点と、襲撃地点の能力1回。0人なら0点・0回</td>
+</tr>
+<tr>
+<td>D（調査と会話）</td>
+<td>全員1枚ずつカードを取る → 廃墟 → 森 → 広場 → 会話 → 特殊カード</td>
+</tr>
+<tr>
+<td>勝利条件</td>
+<td>個人HOの後半（▼の欄）に書いてある。最後まで読むこと。秘密の指定は人に見せない</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1">1. この作品について</h2>
+<p>机の上には、いつも一緒にマダミスを遊ぶ5人と、新作を作った友人アガサがいる。アガサはGMだ。<br />
+これから遊ぶのは、アガサの新作『超マダミスガールズX』。紙の中では、5人と同じ名前の登場人物が、劇中の作者アガサの「校了会」に呼ばれる。そして劇中のアガサが死ぬ。</p>
+<p><strong>HOに書かれた行動は、劇中の同じ名前の人物の行動だ。</strong> 机の上のあなたの過去ではない。進行役のアガサは生きている。</p>
+<h2 id="2">2. 劇中の舞台</h2>
+<p>貸しスタジオ「余白」。今夜20:40に、アガサが作品を「校了」する予定だった。</p>
+<pre><code>              北：編集室
+                 │
+ 西：展示区画 ── 廊下 ── 東：校了室
+                 │
+              南：備品室
+</code></pre>
+<ul>
+<li>4つの部屋は廊下でつながっている。図の向きは途中で変わらない</li>
+<li>家具や看板など、物の位置はこの図に書いていない。現在の配置図と、誰かが持っている古い図は別物</li>
+</ul>
+<h2 id="3">3. 登場人物</h2>
+<table>
+<thead>
+<tr>
+<th>PC</th>
+<th>名前</th>
+<th>人柄（机の上でも、劇中でも）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PC1</td>
+<td>アヤツジ</td>
+<td>負けず嫌いの攻略派。ルールの穴とゲームの組み方を読む。口が悪い</td>
+</tr>
+<tr>
+<td>PC2</td>
+<td>アリスガワ</td>
+<td>かわいい役とみんなで帰れる結末が好き。気持ちで動く。大事な所を読み飛ばす癖がある</td>
+</tr>
+<tr>
+<td>PC3</td>
+<td>ヨネザワ</td>
+<td>探偵役をやりたいツッコミ担当。言い切るのが早い</td>
+</tr>
+<tr>
+<td>PC4</td>
+<td>モリミ</td>
+<td>余りものの役を選ぶ。RPも推理も全力。メタは嫌い……なのに見えてしまう</td>
+</tr>
+<tr>
+<td>PC5</td>
+<td>イサカ</td>
+<td>トリックと構成が好き。変な役ほど楽しむ。勝ち負けのはっきりした結末が好き</td>
+</tr>
+<tr>
+<td>GM</td>
+<td>アガサ</td>
+<td>新作の作者。前置きが大げさ。劇中では校了会の主催者で、被害者</td>
+</tr>
+</tbody>
+</table>
+<p>劇中の5人も、アガサのゲームのテストプレイヤーとして校了会に招かれた仲間どうしだ。</p>
+<h2 id="4-c0">4. 共通の前提（C0）</h2>
+<ul>
+<li>劇中のアガサは、貸しスタジオ「余白」の校了室で死んでいた。<strong>20:30</strong>、イサカとヨネザワが見つけた</li>
+<li>最後にアガサの声が聞こえたのは <strong>20:24</strong></li>
+<li>調べるのは、この5人の行動だけ。外から来た別人、替え玉、魔法は無い</li>
+<li>時計は2種類ある</li>
+<li><strong>基準時計</strong>＝記録機（録画・録音・廊下ログ）の時刻</li>
+<li><strong>補助時計</strong>＝舞台に表示される時刻と、一部の機器の時刻</li>
+<li>今夜この二つがずれていたかどうかは、記録を調べて確かめる。同じ数字でも、どちらの時計の数字かで意味が変わる</li>
+<li>事件の事実と死因は、途中で追加・変更されない。鑑定の「確定所見」は事件の中の事実で、現実の医学や機械の知識で覆す問題ではない</li>
+<li>**TLの「X」**は、その行に何か未確認の情報がある、という印。<strong>Xがあるから嘘、という意味ではない。</strong> Xの無い行に誤りがあることもある。色や位置で答えは決まらない</li>
+</ul>
+<h2 id="5-v">5. 疑惑投票（V）と魔女の順番</h2>
+<ul>
+<li>問いは毎回同じ。「<strong>アガサを殺害した犯人は誰だと思いますか？</strong>」</li>
+<li>自分以外の一人へ一票。自分への投票・票を割る・棄権はできない</li>
+<li>V1〜V5は一票1点、最終投票は一票5点。誰が誰に入れたか、累積の疑惑点は全て公開する</li>
+<li>「死因ではない」と分かる証拠が出ても、もう入った票は減らない</li>
+<li>投票先と、回答用紙に書く答えは別でもよい</li>
+<li><strong>V の直後に、次の魔女を決める。</strong> まだ魔女をしていない人から、次の順で一人</li>
+<li>① 累積疑惑が一番多い人</li>
+<li>② 同点なら、今回の得票が多い人</li>
+<li>③ それも同点なら、開始前に抽選した優先順</li>
+<li>全5回で、全員が1回ずつ魔女になる。決まった魔女は後から替えない</li>
+</ul>
+<h2 id="6-r">6. 魔女ゲーム（R）</h2>
+<h3 id="_1">選び方</h3>
+<p>人間4人は行き先を一つ、魔女は襲撃する地点を一つ、伏せて選ぶ。全員で同時に公開する。選び直しや追加の駆け引きは無い。</p>
+<ul>
+<li>魔女と同じ地点にいた人間は、何人でも全員捕まる</li>
+<li>他の地点にいた人間は逃げ切る</li>
+</ul>
+<h3 id="_2">点数</h3>
+<p><strong>魔女ゲーム累積ポイントは一人一本。</strong> 魔女の時も人間の時も、同じ欄に足す。初期0、マイナスもある。全員に公開する。疑惑点とは別の表。</p>
+<h3 id="_3">五つの地点</h3>
+<table>
+<thead>
+<tr>
+<th>地点</th>
+<th>能力1回</th>
+<th>人間が逃げ切った時</th>
+<th>魔女がc人捕まえた時</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>森</td>
+<td>カードを追加で1枚取る</td>
+<td>＋1、追加1枚</td>
+<td>＋5c、追加c枚</td>
+</tr>
+<tr>
+<td>塔</td>
+<td>自分のポイント＋2（自動・断れない）。<strong>安全地帯ではない</strong>（魔女が来れば捕まる）</td>
+<td>＋3</td>
+<td>＋7c</td>
+</tr>
+<tr>
+<td>橋</td>
+<td>実際に襲撃された地点の能力を1回まねる</td>
+<td>＋1と、まね1回</td>
+<td>＋5c、森・塔・廃墟・広場からc回分を選ぶ</td>
+</tr>
+<tr>
+<td>廃墟</td>
+<td>自分のカード1枚を、次の投票が終わるまで隠す</td>
+<td>＋1、隠す1回</td>
+<td>＋5c、隠すc回</td>
+</tr>
+<tr>
+<td>広場</td>
+<td>他人のカード1枚を自分のものにする</td>
+<td>＋1、奪う1回</td>
+<td>＋5c、奪うc回</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>捕まった人間は−5点だけ。塔の＋2も、橋のまねも無い</li>
+<li>森・廃墟・広場は使わずにパスできる。対象のカードが無ければ不発。使わなかった回数は後へ持ち越せない</li>
+<li><strong>橋</strong></li>
+<li>橋の人間は、襲撃された地点の能力を1回まねる。魔女が誰も捕まえなくても、まねる（魔女が塔なら＋1＋2で＋3）</li>
+<li>魔女が橋を襲撃したら、橋の人間は捕まる</li>
+<li>橋を襲撃した魔女は、捕まえた人数分、森・塔・廃墟・広場から能力を選ぶ（同じ能力を重ねても、混ぜてもよい。橋は選べない）</li>
+<li>選んだ能力は、公開の直後にまとめて宣言する。後から変えない</li>
+<li>どのカードに使うかは、その能力の手番で選ぶ</li>
+</ul>
+<h2 id="7-d">7. 調査と会話（D）</h2>
+<h3 id="_4">解禁と取得</h3>
+<ul>
+<li>D1〜D5で、毎回12枚（証拠10枚＋特殊2枚）が新しく取れるようになる。取られなかったカードは次以降も残る</li>
+<li><strong>通常調査は魔女も含めて全員1枚。</strong> 未取得のカードの番号と題名を見て選ぶ。本文は取った本人だけが読む。森の追加も同じ山から取る</li>
+</ul>
+<h3 id="_5">処理の順番</h3>
+<p><strong>通常取得 → 廃墟 → 森 → 広場 → 会話 → 特殊カード</strong><br />
+- 各段階は「そのRの魔女の次の人」から開始前の優先順で一周し、魔女が最後<br />
+- 能力を複数持つ人は、その段階の自分の番でまとめて1回ずつ使う。橋のまねも同じ段階で使う<br />
+- 森や広場で後から手に入れたカードを、もう終わった廃墟の段階に戻って隠すことはできない<br />
+- 会話のうち3分までは、2人だけの密談に使ってよい</p>
+<h3 id="_6">カードの持ち方</h3>
+<ul>
+<li><strong>1枚のカードの持ち主は1人。誰がどの番号を持っているかは、全員に公開する</strong>（本文は持ち主だけが読む）。広場で奪う相手は、この公開情報を見て選ぶ</li>
+<li>できること：内容を口で話す／同意した相手に本文を見せる／本文を全員に公開する</li>
+<li>できないこと：HOそのものを渡す、本文を書き換える、勝手に写す、持ち主を話し合いで交換する</li>
+<li>役として嘘をつくのはよい。GMの裁定をでっち上げるのは禁止</li>
+<li>奪われても、もう知った内容は話してよい。全員に公開した本文は「公開済み」のまま残る</li>
+<li>カードの「記録者」は、最初にそれを持っていた人。今の持ち主に変わるわけではない</li>
+</ul>
+<h3 id="_7">廃墟と広場で扱えるカード</h3>
+<ul>
+<li>対象：初期カード（H）、調査カード（E）、未使用の特殊カード（SP）</li>
+<li>対象外：HO本体、個人のTL、回答用紙、アリスガワが取り戻した記憶（M）、共通カード（C）</li>
+<li><strong>廃墟（隠す）</strong>：自分が持つ、公開していない未使用のカード。誰がどの番号を隠したかは公開、中身は非公開。次の投票が終わるまで、奪われず・見せられず・使えない（口で話すのは止められない）。同じ番号は全ゲームで一度だけ隠せる</li>
+<li><strong>広場（奪う）</strong>：他人が持つ、隠されていないカード。相手の同意はいらない。奪ったことと新しい持ち主は公開。同じ番号は同じDに一度だけ。使用済みの特殊カードは奪えない</li>
+</ul>
+<h2 id="8-sp">8. 特殊カード（SP）</h2>
+<table>
+<thead>
+<tr>
+<th>種類</th>
+<th>効果</th>
+<th>枚数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>疑惑</td>
+<td>他人の累積疑惑＋1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>信用</td>
+<td>他人の累積疑惑−1（0の人には使えない）</td>
+<td>2</td>
+</tr>
+<tr>
+<td>転嫁</td>
+<td>自分が過去の途中投票で入れた一票を、別の他人へ移す（元−1・先＋1）。元が0なら不可。同じ票の再移動・最終票は不可</td>
+<td>2</td>
+</tr>
+<tr>
+<td>加護</td>
+<td>他人の魔女ゲーム累積ポイント＋1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>呪い</td>
+<td>他人の魔女ゲーム累積ポイント−1</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>使えるのはD2〜D5の特殊カードの段階だけ（D1で取った分はD2から）。最終投票の後は使えない</li>
+<li>自分が持つ、未使用で隠していないカードを公開して使う。使ったら使用済み</li>
+<li>一人につき各Dで1枚、全ゲームで2枚まで。対象は必ず自分以外</li>
+<li>同じ相手には、同じDに「疑惑系（疑惑・信用・転嫁）」1回と「ポイント系（加護・呪い）」1回まで。転嫁は元と先の両方の枠を使う</li>
+<li>順番は処理の順番と同じ。自分の番で「使う」か「パス」を一度だけ選ぶ。疑惑点はマイナスにならない。魔女ゲームのポイントはマイナスになる</li>
+</ul>
+<h2 id="9">9. 共通の照合資料と、回答</h2>
+<ul>
+<li><strong>C1</strong>：D4の通常取得の直後に全員へ配る</li>
+<li><strong>C2</strong>：D5の残り6分で全員へ配る</li>
+<li>共通資料は取得の権利がいらず、誰の物でもない。隠すことも奪うこともできない</li>
+<li>D5の後に**回答記入タイム（8分）**がある。この間は話さず、カードも動かさない</li>
+<li>最終投票と回答用紙は、全員同時に確定する</li>
+</ul>
+<h2 id="10">10. してはいけないこと</h2>
+<ul>
+<li>個人HOの「秘密」の指定を人に見せる、読ませる、言い換えて教える</li>
+<li>自分に投票する</li>
+<li>根拠を示さず「私が犯人だから入れて」と言うだけで、自分への票を集めようとする。「私に入れて」と頼むことも、秘密の指定を教えるのと同じなので禁止</li>
+<li>自分の行動を話すこと自体は自由（本当でも、役としての嘘でも）。記録やカードを根拠に自分の行動を説明するのもよい</li>
+<li>カードの本文やGMの裁定をでっち上げる</li>
+</ul>
+<h2 id="11">11. 時間の目安（仮）</h2>
+<p>導入30分、D0 8分、V各1分、R各2分、D1〜D4各18分、D5 22分、回答記入8分、最終・解説・ED 20分で、<strong>合計 約175分＋休憩</strong>。実際に計った時間ではない。延長する時は全員に同じ条件で伝える。</p></div></main>
+<footer>2026-10-20 00:38 更新。原稿（05_完成版）から自動で作成。作成：Hermes【マダミス】claudeハーネス。</footer></div>
+<script>document.querySelectorAll('.side a').forEach(a=>a.addEventListener('click',()=>document.body.classList.remove('open')));
+document.addEventListener('click',e=>{if(document.body.classList.contains('open')&&!e.target.closest('.side')&&!e.target.closest('.menu'))document.body.classList.remove('open')});</script>
+</body></html>

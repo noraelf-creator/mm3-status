@@ -1,0 +1,303 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>PROJECT_MASTER（作品の入口）｜マダミス3 超マダミスガールズX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f5f0;--paper:#fff;--ink:#1d1d1f;--sub:#6b6b72;--line:#e3dfd6;--red:#d0021b;--mag:#c2189b;--blue:#1d6fd6;--green:#178a4a;--soft:#fbf3f3}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.85 "Zen Kaku Gothic New","Yu Gothic UI","Meiryo",sans-serif}
+header.top{background:#000;color:#fff;padding:30px 24px 22px}
+header.top .in{max-width:1080px;margin:auto}
+header.top small{color:#ff5a6e;letter-spacing:.1em;font-weight:700}
+header.top h1{margin:4px 0 6px;font-size:30px;line-height:1.35}
+header.top h1 span{color:#ff2b47}
+header.top p{margin:0;color:#c9c9cf;font-size:14px}
+nav{position:sticky;top:0;z-index:5;background:rgba(0,0,0,.92);backdrop-filter:blur(6px)}
+nav .in{max-width:1080px;margin:auto;display:flex;gap:4px;overflow-x:auto;padding:0 16px}
+nav a{color:#ddd;text-decoration:none;padding:12px 16px;font-weight:700;white-space:nowrap;border-bottom:3px solid transparent}
+nav a:hover{color:#fff;border-color:#ff2b47}
+main{max-width:1080px;margin:auto;padding:10px 20px 80px}
+section.part{margin-top:46px}
+h2{font-size:26px;margin:0 0 6px;padding-bottom:6px;border-bottom:3px solid var(--ink)}
+h2 .no{color:var(--red);margin-right:8px}
+.lead{color:var(--sub);margin:4px 0 18px}
+h3{font-size:19px;margin:30px 0 10px;padding-left:10px;border-left:5px solid var(--red)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:14px 0;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.big{font-size:19px;line-height:1.9}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.st{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.st b{display:block;font-size:13px;color:var(--sub);font-weight:500}
+.st .v{font-size:17px;font-weight:700;margin:2px 0 4px}
+.st.ok{border-top:5px solid var(--green)}.st.wait{border-top:5px solid var(--mag)}.st.go{border-top:5px solid var(--blue)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:0 8px;border-radius:999px;margin-left:4px}
+.tag.ok{background:#e3f4ea;color:var(--green)}.tag.wait{background:#fbe5f4;color:var(--mag)}.tag.go{background:#e4eefb;color:var(--blue)}
+.tw{overflow-x:auto;margin:10px 0}
+table{border-collapse:collapse;width:100%;background:var(--paper);font-size:14.5px;line-height:1.7}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:#f1eee6;white-space:nowrap}
+table.cards td:first-child{font-weight:700;white-space:nowrap}
+table.acts td:first-child,table.sites td:first-child{font-weight:700;white-space:nowrap}
+.k{display:inline-block;font-size:12px;font-weight:700;border-radius:6px;padding:0 6px;margin:0 1px}
+.k1{background:var(--red);color:#fff}.km{background:#fff0c2;color:#8a5a00}.kw{background:#e8e4ff;color:#4b3cb0}.kn{background:#eee;color:#666}
+ol.chain{counter-reset:c;list-style:none;padding:0;margin:8px 0}
+ol.chain li{counter-increment:c;position:relative;padding:10px 12px 10px 52px;background:var(--paper);border:1px solid var(--line);border-radius:12px;margin:8px 0}
+ol.chain li::before{content:counter(c);position:absolute;left:12px;top:10px;width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;text-align:center;line-height:28px;font-weight:700}
+.time{display:grid;grid-template-columns:76px 1fr;gap:0;background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.time div{padding:9px 12px;border-bottom:1px solid var(--line)}
+.time .t{font:700 15px "IBM Plex Mono",Consolas,monospace;background:#faf8f3;color:var(--sub)}
+.time .death{background:var(--soft)}
+.time .t.death{color:var(--red)}
+.who{font-weight:700}
+.legend span{margin-right:12px;font-size:14px}
+.note{font-size:14px;color:var(--sub)}
+.secret{border:2px dashed var(--red);background:var(--soft)}
+.ex{background:#101014;color:#eee;border-radius:14px;padding:16px 18px}
+.ex b{color:#ff8c9b}
+.ex table{background:#18181d;color:#eee}.ex th{background:#26262c;color:#fff}.ex td,.ex th{border-color:#33333b}
+details{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:6px 14px;margin:10px 0}
+details summary{cursor:pointer;font-weight:700;padding:6px 0}
+code{font:13px "IBM Plex Mono",Consolas,monospace;background:#f1eee6;padding:0 4px;border-radius:4px}
+footer{max-width:1080px;margin:auto;padding:20px;color:var(--sub);font-size:13px}
+@media(max-width:640px){header.top h1{font-size:23px}h2{font-size:22px}body{font-size:15px}}
+
+body{display:block}
+.side{position:fixed;top:0;left:0;bottom:0;width:290px;background:#0b0b0d;color:#ddd;overflow-y:auto;padding:0 0 40px;z-index:20;border-right:1px solid #222}
+.side .brand{display:block;padding:18px 18px 14px;color:#fff;text-decoration:none;border-bottom:1px solid #222}
+.side .brand small{display:block;color:#ff5a6e;font-size:11px;letter-spacing:.1em;font-weight:700}
+.side .brand b{font-size:17px;line-height:1.4}
+.side .brand b span{color:#ff2b47}
+.side h4{margin:18px 18px 6px;font-size:12px;color:#8c8c95;letter-spacing:.08em}
+.side a.i{display:block;padding:6px 18px 6px 22px;color:#d6d6db;text-decoration:none;font-size:14px;line-height:1.5;border-left:3px solid transparent}
+.side a.i:hover{background:#18181c;color:#fff}
+.side a.i.on{background:#1d1d22;color:#fff;border-left-color:#ff2b47;font-weight:700}
+.wrap{margin-left:290px}
+.wrap header.top{padding:26px 28px 20px}
+.wrap main{padding:10px 28px 80px;max-width:1100px}
+.menu{display:none}
+.doc h1{font-size:26px;border-bottom:3px solid var(--ink);padding-bottom:6px}
+.doc h2{font-size:21px;border-bottom:2px solid var(--line);margin-top:34px}
+.doc h3{font-size:18px}
+.doc pre{background:#f1eee6;padding:12px;border-radius:10px;overflow-x:auto;font:14px/1.5 "IBM Plex Mono",Consolas,monospace}
+.doc table{display:block;overflow-x:auto}
+.doc blockquote{margin:12px 0;padding:8px 14px;border-left:4px solid var(--red);background:var(--soft)}
+.src{font-size:12px;color:var(--sub);margin:4px 0 14px}
+.story{border-radius:16px;padding:18px 20px;margin:16px 0;border:1px solid var(--line);background:var(--paper)}
+.story h3{margin-top:0}
+.story.s1{border-top:6px solid var(--blue)}.story.s2{border-top:6px solid var(--red)}.story.s3{border-top:6px solid var(--mag)}
+.layers{display:grid;gap:10px;margin:14px 0}
+.layer{border-radius:14px;padding:14px 16px;color:#fff}
+.layer b{font-size:17px}.layer.l1{background:#1d4f91}.layer.l2{background:#9b1022;margin:0 22px}.layer.l3{background:#7a1466;margin:0 44px}
+.imgs figure{margin:18px 0;background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.imgs img{display:block;width:100%;height:auto}
+.imgs figcaption{padding:8px 14px;font-size:14px;color:var(--sub)}
+@media(max-width:900px){
+ .side{transform:translateX(-100%);transition:transform .2s;width:84%;max-width:320px}
+ body.open .side{transform:none;box-shadow:0 0 0 100vmax rgba(0,0,0,.45)}
+ .wrap{margin-left:0}
+ .menu{display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:15;background:#000;color:#fff;padding:10px 14px}
+ .menu button{background:#ff2b47;color:#fff;border:0;border-radius:8px;font:700 15px inherit;padding:8px 12px}
+ .wrap header.top{padding:18px 16px}.wrap main{padding:6px 14px 60px}
+}
+</style></head><body>
+<nav class="side"><a class="brand" href="index.html"><small>作者用・真相を含む</small><b>マダミス3<br>超マダミスガールズ<span>X</span></b></a>
+<h4>まとめ</h4>
+<a class="i" href="index.html">いまの状況</a>
+<a class="i" href="structure.html">全体の骨格と3つの物語</a>
+<a class="i" href="skeleton.html">メイン推理の骨格</a>
+<a class="i" href="cards.html">カードの役割（一覧）</a>
+<a class="i" href="witch.html">魔女ゲーム</a>
+<a class="i" href="images.html">画像（立ち絵）</a>
+<h4>プレイヤー配布</h4>
+<a class="i" href="doc-common-ho.html">共通HO</a>
+<a class="i" href="doc-ho-pc1.html">HO　PC1 アヤツジ</a>
+<a class="i" href="doc-ho-pc2.html">HO　PC2 アリスガワ</a>
+<a class="i" href="doc-ho-pc3.html">HO　PC3 ヨネザワ</a>
+<a class="i" href="doc-ho-pc4.html">HO　PC4 モリミ</a>
+<a class="i" href="doc-ho-pc5.html">HO　PC5 イサカ</a>
+<a class="i" href="doc-r01.html">R01 OP 校了会の始め方</a>
+<a class="i" href="doc-r02.html">R02 劇中 19:50の校了会</a>
+<a class="i" href="doc-r03.html">R03 劇中 20:30の発見</a>
+<a class="i" href="doc-answer-pc1.html">回答用紙　PC1 アヤツジ</a>
+<a class="i" href="doc-answer-pc2.html">回答用紙　PC2 アリスガワ</a>
+<a class="i" href="doc-answer-pc3.html">回答用紙　PC3 ヨネザワ</a>
+<a class="i" href="doc-answer-pc4.html">回答用紙　PC4 モリミ</a>
+<a class="i" href="doc-answer-pc5.html">回答用紙　PC5 イサカ</a>
+<a class="i" href="doc-howto.html">配布のしかた</a>
+<h4>カード（全文）</h4>
+<a class="i" href="doc-card-h.html">初期カード H01〜H10</a>
+<a class="i" href="doc-card-d1.html">D1　E01〜E10・SP01〜02</a>
+<a class="i" href="doc-card-d2.html">D2　E11〜E20・SP03〜04</a>
+<a class="i" href="doc-card-d3.html">D3　E21〜E30・SP05〜06</a>
+<a class="i" href="doc-card-d4.html">D4　E31〜E40・SP07〜08</a>
+<a class="i" href="doc-card-d5.html">D5　E41〜E50・SP09〜10</a>
+<a class="i" href="doc-card-c.html">共通カード C0〜C2</a>
+<a class="i" href="doc-m.html">アリスガワの頁 M1〜M3</a>
+<h4>GM資料</h4>
+<a class="i" href="doc-gm-guide.html">GM進行ガイド</a>
+<a class="i" href="doc-distribution.html">配布物一覧と配布タイミング</a>
+<a class="i" href="doc-r04.html">R04 真相解説</a>
+<a class="i" href="doc-r05.html">R05 ED そのXは私の地雷</a>
+<a class="i" href="doc-r06.html">R06 個別エピローグ</a>
+<a class="i" href="doc-answers-all.html">回答用紙（全PCの控え）</a>
+<a class="i" href="doc-truth.html">正本　真相</a>
+<a class="i" href="doc-timeline.html">正本　タイムライン</a>
+<a class="i" href="doc-characters.html">正本　キャラクター表</a>
+<a class="i" href="doc-cluemap.html">正本　手がかりマップ</a>
+<h4>制作の記録</h4>
+<a class="i on" href="doc-project-master.html">PROJECT_MASTER（作品の入口）</a>
+<a class="i" href="doc-changelog.html">CHANGELOG（変更の履歴）</a>
+<a class="i" href="doc-decisions.html">作者の決定の記録（10/17〜）</a>
+</nav>
+<div class="wrap"><div class="menu"><button onclick="document.body.classList.toggle('open')">☰ 目次</button><span>マダミス3｜PROJECT_MASTER（作品の入口）</span></div>
+<header class="top"><div class="in"><small>作者用・真相を含む（プレイヤーに見せない）</small><h1>PROJECT_MASTER（作品の入口）</h1></div></header>
+<main><p class="src">原文：PROJECT_MASTER.md</p><div class="doc"><h1 id="project_master-x-remake3">PROJECT_MASTER — 超マダミスガールズX REMAKE（マダミス3作目）</h1>
+<p>最終更新：2026-10-05（総点検・改稿 Phase 0〜7 完了）</p>
+<h2 id="1">1. 最新版の場所</h2>
+<table>
+<thead>
+<tr>
+<th>物</th>
+<th>場所</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>完成版（今後の基準）</strong></td>
+<td><code>C:\00_【創作】一時フォルダ\_マダミス改訂_20261004\超マダミスガールズX\05_完成版\</code></td>
+</tr>
+<tr>
+<td>プレイヤー配布物</td>
+<td><code>05_完成版\プレイヤー配布\</code>（配り方は同フォルダの README_配布のしかた.md）</td>
+</tr>
+<tr>
+<td>GM資料</td>
+<td><code>05_完成版\GM資料\</code>（正本4点・GM進行ガイド・カード原本・M1〜M3・R04〜R06・配布表）</td>
+</tr>
+<tr>
+<td>作業稿</td>
+<td><code>03_改稿\</code></td>
+</tr>
+<tr>
+<td>チェック結果</td>
+<td><code>02_チェック\構成チェック.md</code>・<code>整合性チェック.md</code></td>
+</tr>
+<tr>
+<td>仮想プレイ</td>
+<td><code>04_仮想プレイ\</code>（第1〜4回のログと振り返り）</td>
+</tr>
+<tr>
+<td>変更履歴・報告</td>
+<td><code>CHANGELOG.md</code>・<code>REPORT.md</code></td>
+</tr>
+<tr>
+<td>改訂元（読み取り専用。変更していない）</td>
+<td><code>超マダミスガールズX_HTML\REMAKE\CASE_V08_COMPLETE.md</code>（v0.8）、<code>超マダミスガールズX_HARNESS\超マダミスガールズX_REMAKE\00_WORKBENCH</code>（v0.8と同文）</td>
+</tr>
+<tr>
+<td>旧版（口調の参照のみ）</td>
+<td><code>超マダミスガールズX_HTML\LEGACY</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="2">2. 確定事項（変えていない骨格）</h2>
+<ul>
+<li>真犯人はモリミ。20:16、校了室で真鍮のベル台座による頭部の一撃で即死</li>
+<li>5人全員が独立に殺害を企て実行。共謀なし。全員が自分の工作の結果を知らない</li>
+<li>他の4工作（看板・毒・通電・刃物）はどれも死因にならない。24分の声はアガサ本人の録音</li>
+<li>動機はv0.8の「作品観を踏まれた怒り」（X＝未知数／削除／誤答／作者都合／Xの悲劇）</li>
+<li>TLのXは「未確認の印」。場所（アヤツジ）・行動（アリスガワ）・時刻（ヨネザワ）・結果（モリミ）・人物の生死（イサカ）</li>
+<li>秘密の主勝利は全員共通（A：疑惑の単独最多／B：魔女ゲームの単独最下位）。EDで明かす</li>
+<li>副勝利5種と採点基準、カード73枚（H10・E50・SP10・C3）とM1〜M3、各Dの解禁、魔女ゲームと所有のルール</li>
+<li>C1はD4の通常取得の直後、C2はD5の残り6分</li>
+</ul>
+<h2 id="3">3. この改訂で決めたこと</h2>
+<ul>
+<li>カードは1〜3文・80字以内（E40とC0〜C2は箇条書きの例外）</li>
+<li>HOは一人称・心情中心。目的・秘密・知っていること・知らないことは末尾に箇条書き</li>
+<li>読み合わせR02（19:50の校了会）・R03（20:30の発見）・R06（個別エピローグ）を追加</li>
+<li>D5の後に回答記入タイム8分（私語なし・カード操作なし）</li>
+<li>「誰がどの番号を持っているかは公開」を明記</li>
+<li>呼び分け：「看板の点検票」（アヤツジ）／「試験票」「通常点検の表紙」（ヨネザワ）</li>
+<li>イサカは女性（旧版どおり）</li>
+</ul>
+<h2 id="4">4. 廃止した事項</h2>
+<ul>
+<li>v0.5〜v0.7のルール・事件（罠、本命−2、旧魔女ゲーム、録音事件v0.6 など）は使わない</li>
+<li>REMAKE直下のv0.5期の設計メモ（SUSPICION_VOTES、WITCH_ORDER、PC_LOCATION_MATRIX など）は不採用</li>
+<li>初期カードの「本文の『あなた』はこの人物…」という前置き（【記録者】ラベルに置き換え）</li>
+<li>特殊カードごとの共通ルール文（共通HOへ一本化）</li>
+</ul>
+<h2 id="5-922026-10-170">5. 未解決事項（9件。うち2件は2026-10-17に作者が決定。致命・重要は0）</h2>
+<table>
+<thead>
+<tr>
+<th>No</th>
+<th>区分</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>作者決定（10/17）</td>
+<td>C2の中身を、結論の語を外した「生の記録」の形に直した。公開時刻はD5残り6分のまま（質問3「勧めで」。時刻はそのままと解釈）</td>
+</tr>
+<tr>
+<td>2</td>
+<td>作者決定（10/17）</td>
+<td>追加した読み合わせ（R02・R03・R06）、人物紹介、会場図、HOの心情描写を採用（質問2）。口調は旧版の口調カードで確かめ、R01・R06に旧版の台詞を戻した</td>
+</tr>
+<tr>
+<td>3</td>
+<td>作者判断</td>
+<td>主Aが真犯人以外に渡ることがある／最終投票が割れて同率になりやすい点を、そのままにするか</td>
+</tr>
+<tr>
+<td>4</td>
+<td>作者判断</td>
+<td>特殊カード（疑惑系）が使われにくい点</td>
+</tr>
+<tr>
+<td>5</td>
+<td>未実施</td>
+<td>人間による実卓の試遊と時間の実測</td>
+</tr>
+<tr>
+<td>6</td>
+<td>未実施</td>
+<td>ハーネス（00_WORKBENCH）への反映</td>
+</tr>
+<tr>
+<td>7</td>
+<td>未実施</td>
+<td>盤面・カード画像・立ち絵の割当・HO組版・音源・ココフォリア取込</td>
+</tr>
+<tr>
+<td>8</td>
+<td>軽微</td>
+<td>アリスガワが後半に手持ち無沙汰になりやすい</td>
+</tr>
+<tr>
+<td>9</td>
+<td>軽微</td>
+<td>経験者のいない卓で時刻の整理に詰まりやすい（GMの声かけで緩和）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6">6. 次にやること</h2>
+<ol>
+<li>作者が <code>05_完成版</code> のHO・読み合わせを読み、No.1〜4を判断する</li>
+<li>判断が出たら、ハーネスの00_WORKBENCHへ反映する（カード本文・HO・読み合わせ。反映は元フォルダを書き換える作業なので、作者の指示を受けてから）</li>
+<li>人間の5人で初見の試遊を1〜2回行い、時間と詰まった所を記録する（記録表はGM進行ガイド§7）</li>
+</ol>
+<h2 id="7-index2026-10-07">7. 制作INDEXサイト（2026-10-07）</h2>
+<ul>
+<li>公開：https://noraelf-creator.github.io/super-madamis-index/ （お母さんは大統領・公安勇者パーティのINDEXと同じ画面）</li>
+<li>リポジトリ：noraelf-creator/super-madamis-index（ローカル <code>C:\02_claude.projects\super-madamis-index</code>）</li>
+<li>修正案の共有保存：この作品専用のCloudflare Worker <code>super-madamis-sync</code>（D1 <code>super-madamis-author-notes</code>、projectId <code>super_madamis_x</code>）</li>
+<li>作者用編集キーの控え：このフォルダの <code>.private/作者用編集キー.txt</code>（リポジトリには入れていない）</li>
+<li>このフォルダを直したら、サイト側で <code>npm run sync</code> → <code>npm run build</code> → commit・push</li>
+</ul></div></main>
+<footer>2026-10-20 00:38 更新。原稿（05_完成版）から自動で作成。作成：Hermes【マダミス】claudeハーネス。</footer></div>
+<script>document.querySelectorAll('.side a').forEach(a=>a.addEventListener('click',()=>document.body.classList.remove('open')));
+document.addEventListener('click',e=>{if(document.body.classList.contains('open')&&!e.target.closest('.side')&&!e.target.closest('.menu'))document.body.classList.remove('open')});</script>
+</body></html>

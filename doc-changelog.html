@@ -1,0 +1,584 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>CHANGELOG（変更の履歴）｜マダミス3 超マダミスガールズX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f5f0;--paper:#fff;--ink:#1d1d1f;--sub:#6b6b72;--line:#e3dfd6;--red:#d0021b;--mag:#c2189b;--blue:#1d6fd6;--green:#178a4a;--soft:#fbf3f3}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.85 "Zen Kaku Gothic New","Yu Gothic UI","Meiryo",sans-serif}
+header.top{background:#000;color:#fff;padding:30px 24px 22px}
+header.top .in{max-width:1080px;margin:auto}
+header.top small{color:#ff5a6e;letter-spacing:.1em;font-weight:700}
+header.top h1{margin:4px 0 6px;font-size:30px;line-height:1.35}
+header.top h1 span{color:#ff2b47}
+header.top p{margin:0;color:#c9c9cf;font-size:14px}
+nav{position:sticky;top:0;z-index:5;background:rgba(0,0,0,.92);backdrop-filter:blur(6px)}
+nav .in{max-width:1080px;margin:auto;display:flex;gap:4px;overflow-x:auto;padding:0 16px}
+nav a{color:#ddd;text-decoration:none;padding:12px 16px;font-weight:700;white-space:nowrap;border-bottom:3px solid transparent}
+nav a:hover{color:#fff;border-color:#ff2b47}
+main{max-width:1080px;margin:auto;padding:10px 20px 80px}
+section.part{margin-top:46px}
+h2{font-size:26px;margin:0 0 6px;padding-bottom:6px;border-bottom:3px solid var(--ink)}
+h2 .no{color:var(--red);margin-right:8px}
+.lead{color:var(--sub);margin:4px 0 18px}
+h3{font-size:19px;margin:30px 0 10px;padding-left:10px;border-left:5px solid var(--red)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:14px 0;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.big{font-size:19px;line-height:1.9}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.st{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.st b{display:block;font-size:13px;color:var(--sub);font-weight:500}
+.st .v{font-size:17px;font-weight:700;margin:2px 0 4px}
+.st.ok{border-top:5px solid var(--green)}.st.wait{border-top:5px solid var(--mag)}.st.go{border-top:5px solid var(--blue)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:0 8px;border-radius:999px;margin-left:4px}
+.tag.ok{background:#e3f4ea;color:var(--green)}.tag.wait{background:#fbe5f4;color:var(--mag)}.tag.go{background:#e4eefb;color:var(--blue)}
+.tw{overflow-x:auto;margin:10px 0}
+table{border-collapse:collapse;width:100%;background:var(--paper);font-size:14.5px;line-height:1.7}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:#f1eee6;white-space:nowrap}
+table.cards td:first-child{font-weight:700;white-space:nowrap}
+table.acts td:first-child,table.sites td:first-child{font-weight:700;white-space:nowrap}
+.k{display:inline-block;font-size:12px;font-weight:700;border-radius:6px;padding:0 6px;margin:0 1px}
+.k1{background:var(--red);color:#fff}.km{background:#fff0c2;color:#8a5a00}.kw{background:#e8e4ff;color:#4b3cb0}.kn{background:#eee;color:#666}
+ol.chain{counter-reset:c;list-style:none;padding:0;margin:8px 0}
+ol.chain li{counter-increment:c;position:relative;padding:10px 12px 10px 52px;background:var(--paper);border:1px solid var(--line);border-radius:12px;margin:8px 0}
+ol.chain li::before{content:counter(c);position:absolute;left:12px;top:10px;width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;text-align:center;line-height:28px;font-weight:700}
+.time{display:grid;grid-template-columns:76px 1fr;gap:0;background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.time div{padding:9px 12px;border-bottom:1px solid var(--line)}
+.time .t{font:700 15px "IBM Plex Mono",Consolas,monospace;background:#faf8f3;color:var(--sub)}
+.time .death{background:var(--soft)}
+.time .t.death{color:var(--red)}
+.who{font-weight:700}
+.legend span{margin-right:12px;font-size:14px}
+.note{font-size:14px;color:var(--sub)}
+.secret{border:2px dashed var(--red);background:var(--soft)}
+.ex{background:#101014;color:#eee;border-radius:14px;padding:16px 18px}
+.ex b{color:#ff8c9b}
+.ex table{background:#18181d;color:#eee}.ex th{background:#26262c;color:#fff}.ex td,.ex th{border-color:#33333b}
+details{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:6px 14px;margin:10px 0}
+details summary{cursor:pointer;font-weight:700;padding:6px 0}
+code{font:13px "IBM Plex Mono",Consolas,monospace;background:#f1eee6;padding:0 4px;border-radius:4px}
+footer{max-width:1080px;margin:auto;padding:20px;color:var(--sub);font-size:13px}
+@media(max-width:640px){header.top h1{font-size:23px}h2{font-size:22px}body{font-size:15px}}
+
+body{display:block}
+.side{position:fixed;top:0;left:0;bottom:0;width:290px;background:#0b0b0d;color:#ddd;overflow-y:auto;padding:0 0 40px;z-index:20;border-right:1px solid #222}
+.side .brand{display:block;padding:18px 18px 14px;color:#fff;text-decoration:none;border-bottom:1px solid #222}
+.side .brand small{display:block;color:#ff5a6e;font-size:11px;letter-spacing:.1em;font-weight:700}
+.side .brand b{font-size:17px;line-height:1.4}
+.side .brand b span{color:#ff2b47}
+.side h4{margin:18px 18px 6px;font-size:12px;color:#8c8c95;letter-spacing:.08em}
+.side a.i{display:block;padding:6px 18px 6px 22px;color:#d6d6db;text-decoration:none;font-size:14px;line-height:1.5;border-left:3px solid transparent}
+.side a.i:hover{background:#18181c;color:#fff}
+.side a.i.on{background:#1d1d22;color:#fff;border-left-color:#ff2b47;font-weight:700}
+.wrap{margin-left:290px}
+.wrap header.top{padding:26px 28px 20px}
+.wrap main{padding:10px 28px 80px;max-width:1100px}
+.menu{display:none}
+.doc h1{font-size:26px;border-bottom:3px solid var(--ink);padding-bottom:6px}
+.doc h2{font-size:21px;border-bottom:2px solid var(--line);margin-top:34px}
+.doc h3{font-size:18px}
+.doc pre{background:#f1eee6;padding:12px;border-radius:10px;overflow-x:auto;font:14px/1.5 "IBM Plex Mono",Consolas,monospace}
+.doc table{display:block;overflow-x:auto}
+.doc blockquote{margin:12px 0;padding:8px 14px;border-left:4px solid var(--red);background:var(--soft)}
+.src{font-size:12px;color:var(--sub);margin:4px 0 14px}
+.story{border-radius:16px;padding:18px 20px;margin:16px 0;border:1px solid var(--line);background:var(--paper)}
+.story h3{margin-top:0}
+.story.s1{border-top:6px solid var(--blue)}.story.s2{border-top:6px solid var(--red)}.story.s3{border-top:6px solid var(--mag)}
+.layers{display:grid;gap:10px;margin:14px 0}
+.layer{border-radius:14px;padding:14px 16px;color:#fff}
+.layer b{font-size:17px}.layer.l1{background:#1d4f91}.layer.l2{background:#9b1022;margin:0 22px}.layer.l3{background:#7a1466;margin:0 44px}
+.imgs figure{margin:18px 0;background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.imgs img{display:block;width:100%;height:auto}
+.imgs figcaption{padding:8px 14px;font-size:14px;color:var(--sub)}
+@media(max-width:900px){
+ .side{transform:translateX(-100%);transition:transform .2s;width:84%;max-width:320px}
+ body.open .side{transform:none;box-shadow:0 0 0 100vmax rgba(0,0,0,.45)}
+ .wrap{margin-left:0}
+ .menu{display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:15;background:#000;color:#fff;padding:10px 14px}
+ .menu button{background:#ff2b47;color:#fff;border:0;border-radius:8px;font:700 15px inherit;padding:8px 12px}
+ .wrap header.top{padding:18px 16px}.wrap main{padding:6px 14px 60px}
+}
+</style></head><body>
+<nav class="side"><a class="brand" href="index.html"><small>作者用・真相を含む</small><b>マダミス3<br>超マダミスガールズ<span>X</span></b></a>
+<h4>まとめ</h4>
+<a class="i" href="index.html">いまの状況</a>
+<a class="i" href="structure.html">全体の骨格と3つの物語</a>
+<a class="i" href="skeleton.html">メイン推理の骨格</a>
+<a class="i" href="cards.html">カードの役割（一覧）</a>
+<a class="i" href="witch.html">魔女ゲーム</a>
+<a class="i" href="images.html">画像（立ち絵）</a>
+<h4>プレイヤー配布</h4>
+<a class="i" href="doc-common-ho.html">共通HO</a>
+<a class="i" href="doc-ho-pc1.html">HO　PC1 アヤツジ</a>
+<a class="i" href="doc-ho-pc2.html">HO　PC2 アリスガワ</a>
+<a class="i" href="doc-ho-pc3.html">HO　PC3 ヨネザワ</a>
+<a class="i" href="doc-ho-pc4.html">HO　PC4 モリミ</a>
+<a class="i" href="doc-ho-pc5.html">HO　PC5 イサカ</a>
+<a class="i" href="doc-r01.html">R01 OP 校了会の始め方</a>
+<a class="i" href="doc-r02.html">R02 劇中 19:50の校了会</a>
+<a class="i" href="doc-r03.html">R03 劇中 20:30の発見</a>
+<a class="i" href="doc-answer-pc1.html">回答用紙　PC1 アヤツジ</a>
+<a class="i" href="doc-answer-pc2.html">回答用紙　PC2 アリスガワ</a>
+<a class="i" href="doc-answer-pc3.html">回答用紙　PC3 ヨネザワ</a>
+<a class="i" href="doc-answer-pc4.html">回答用紙　PC4 モリミ</a>
+<a class="i" href="doc-answer-pc5.html">回答用紙　PC5 イサカ</a>
+<a class="i" href="doc-howto.html">配布のしかた</a>
+<h4>カード（全文）</h4>
+<a class="i" href="doc-card-h.html">初期カード H01〜H10</a>
+<a class="i" href="doc-card-d1.html">D1　E01〜E10・SP01〜02</a>
+<a class="i" href="doc-card-d2.html">D2　E11〜E20・SP03〜04</a>
+<a class="i" href="doc-card-d3.html">D3　E21〜E30・SP05〜06</a>
+<a class="i" href="doc-card-d4.html">D4　E31〜E40・SP07〜08</a>
+<a class="i" href="doc-card-d5.html">D5　E41〜E50・SP09〜10</a>
+<a class="i" href="doc-card-c.html">共通カード C0〜C2</a>
+<a class="i" href="doc-m.html">アリスガワの頁 M1〜M3</a>
+<h4>GM資料</h4>
+<a class="i" href="doc-gm-guide.html">GM進行ガイド</a>
+<a class="i" href="doc-distribution.html">配布物一覧と配布タイミング</a>
+<a class="i" href="doc-r04.html">R04 真相解説</a>
+<a class="i" href="doc-r05.html">R05 ED そのXは私の地雷</a>
+<a class="i" href="doc-r06.html">R06 個別エピローグ</a>
+<a class="i" href="doc-answers-all.html">回答用紙（全PCの控え）</a>
+<a class="i" href="doc-truth.html">正本　真相</a>
+<a class="i" href="doc-timeline.html">正本　タイムライン</a>
+<a class="i" href="doc-characters.html">正本　キャラクター表</a>
+<a class="i" href="doc-cluemap.html">正本　手がかりマップ</a>
+<h4>制作の記録</h4>
+<a class="i" href="doc-project-master.html">PROJECT_MASTER（作品の入口）</a>
+<a class="i on" href="doc-changelog.html">CHANGELOG（変更の履歴）</a>
+<a class="i" href="doc-decisions.html">作者の決定の記録（10/17〜）</a>
+</nav>
+<div class="wrap"><div class="menu"><button onclick="document.body.classList.toggle('open')">☰ 目次</button><span>マダミス3｜CHANGELOG（変更の履歴）</span></div>
+<header class="top"><div class="in"><small>作者用・真相を含む（プレイヤーに見せない）</small><h1>CHANGELOG（変更の履歴）</h1></div></header>
+<main><p class="src">原文：CHANGELOG.md</p><div class="doc"><h1 id="changelog-x-remake-2026-10-05">CHANGELOG — 超マダミスガールズX REMAKE 総点検・改稿（2026-10-05）</h1>
+<p>改訂元：v0.8（<code>超マダミスガールズX_HTML\REMAKE\CASE_V08_COMPLETE.md</code>＝WORKBENCHと同文）。元ファイルは一切変更していない。<br />
+成果物：<code>05_完成版/</code>（作業稿は <code>03_改稿/</code>）。</p>
+<hr />
+<h2 id="0-2026-10-1718-claude-opushermesclaude">0. 2026-10-17〜18 作者の決定による改稿（Claude Opus／Hermes【マダミス】claudeハーネス）</h2>
+<p>作者がハーネス検証の質問10問に答え（1 はい／2 とる／3 勧めで／4 悩んでる／5 勧め／6 たす／7 基準時計／8 混ぜる／9 勧め／10 勧め）、「文章の感じもある程度なおしていい感じにしておいて」と任された。報告：<code>100_【マダミス】ハーネス作成/work_claude_opus_20261015/12_mm3-review-20261017/REPORT.md</code>。決定記録：同 <code>decisions-20261017.md</code>。</p>
+<ul>
+<li>2026-10-17〜18 1回目：83か所を直し、カード5枚を改名した。控え（直す前の丸ごとの写し）：同 <code>private/backup_before_20261017/</code></li>
+<li>2026-10-18 2回目：別担当の読み取り専用の点検（同 <code>check-20261017/REPORT.md</code>。重大0・中6・低15）を受けて直した。控え：同 <code>private/backup_before_20261018_fix/</code></li>
+</ul>
+<p>直したのは 05_完成版 だけ。03_改稿（作業稿）と、INDEXサイト（super-madamis-index。HO・読み合わせ・カード・回答用紙は 03_改稿 から写している）は変えていないので、サイトは直す前の文のまま。</p>
+<table>
+<thead>
+<tr>
+<th>区分</th>
+<th>変えた所</th>
+<th>中身</th>
+<th>決定・理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>答えの言い切り</td>
+<td>C2（プレイヤー配布・カード原本）</td>
+<td>結論の語（即時致命傷／新しい死因ではない／生きた受け答えの記録はない／体へは届いていない／15分は生きている）を外し、記録と所見だけを並べた。所見は「頭部の傷はベル台座の縁の形と一致」「胸の刃物の傷は死後」「毒を摂取した跡はない」の3つだけ。見出し「追加攻撃」を「刃物」に。最後に「どの工作が死因になったかは、この束と手元のカードから組み立てる」</td>
+<td>質問3（v0.4「最終共通情報は答えではなく、推理を確認する材料」）</td>
+</tr>
+<tr>
+<td>答えの言い切り</td>
+<td>C1</td>
+<td>ヨネザワの草稿Y7の答えになっていた「正式な書類名は『試験票』。『験』が重なった書き方に事件上の意味はない」を削除（10/05の改稿で足された文。Y7はE33とHOの「試験票」の表記で確かめられる）</td>
+<td>質問3</td>
+</tr>
+<tr>
+<td>答えの言い切り</td>
+<td>E25・E41・E34</td>
+<td>v0.8にあった断り書きを、80字・3文以内で戻した。E25「映像だけでは死因まで言えない」、E41「打った人と時刻は示さない」、E34「台座と傷が合うかは、この映像では分からない」。E31は「位置照合欄は空白」が同じ働きをしているので、そのまま</td>
+<td>質問3</td>
+</tr>
+<tr>
+<td>採点</td>
+<td>手がかりマップ §1・§3・§5、GM進行ガイド §5</td>
+<td>C2に「即時」が無くなったので、E41・E46がどちらも卓に出なかった時は、イサカの副勝利の「方法」と「決定的証拠」で「即時」を求めない、と書いた。C2の行の説明と主ルートの注も直した</td>
+<td>質問3に採点をそろえた</td>
+</tr>
+<tr>
+<td>一番のオチ</td>
+<td>R04末尾のGM指示、R05冒頭の注記、GM進行ガイド §6</td>
+<td>「秘密主条件の共通性を明かす」を台本から消した。§6の5を「R05を読む → 読み終えてから主勝利を発表」にそろえた（§2・R05末尾と同じ順）</td>
+<td>優先2</td>
+</tr>
+<tr>
+<td>一番のオチ</td>
+<td>R05</td>
+<td>ヨネザワ「そこの原文まで校正させる気かよ」→「……全員、負けに来てたのかよ」。ヨネザワ「今の台詞、全員が分かってたみたいに読ませるなよ」を削除</td>
+<td>優先2（文章の担当 L-06 案2）</td>
+</tr>
+<tr>
+<td>題名の先出し</td>
+<td>初期カードの一覧（D0）、H07・H09</td>
+<td>一覧は題名の列を外し、番号と持ち主だけにした（配布の案内とGM進行ガイド§2のD0にも書いた）。H07「打つ直前の姿」→「前屈みのアガサ」、H09「触れる前の姿」→「机の脇に崩れた姿」（見せたり奪われたりした時に、題名だけで一撃・刺傷が分からないように。本文は変えていない）</td>
+<td>優先4（案1・案3）</td>
+</tr>
+<tr>
+<td>題名の先出し</td>
+<td>E22・E24・E32・E33・E35、E30</td>
+<td>「飲まれる前の流出」→「黒いカップの連続映像」、「追加攻撃の時刻」→「刃物の時刻」、「アリスガワの三つの処理」→「黒いカップのメモ」（本文の処理は二つ）、「ヨネザワの原試験票」→「原試験票」、「イサカの実行メモ」→「実行メモ」。E30本文の「追加攻撃の後に」→「刃物の攻撃の後に」。ファイル名・一覧・カード原本・手がかりマップをそろえた</td>
+<td>優先4</td>
+</tr>
+<tr>
+<td>食い違い</td>
+<td>H02（カード・カード原本・アヤツジHOの控え）</td>
+<td>「声をかけると、瓶を手提げにしまった」→「瓶はすぐ手提げに消えた」（アヤツジHOの「一瞬見えた」とGMの裁定に合わせた）</td>
+<td>優先5</td>
+</tr>
+<tr>
+<td>食い違い</td>
+<td>アリスガワの回答用紙・HO・手がかりマップ §5・真相 §10</td>
+<td>申請の締め切り（D5の終わり）と、4つの確認を書く時（回答記入タイム、全員同時）を分けた</td>
+<td>優先5</td>
+</tr>
+<tr>
+<td>食い違い</td>
+<td>回答用紙5人分と控え、共通HO §5</td>
+<td>「回答に書く真相」→「この用紙に書く答え」「回答用紙に書く答え」</td>
+<td>優先5</td>
+</tr>
+<tr>
+<td>食い違い</td>
+<td>回答用紙を配る時期（README・配布物一覧・GM進行ガイド§1）</td>
+<td>「最初に配ってもよい」を外し、回答記入タイムに配る（イサカの設問「最後の声との関係」などが、先に配ると答えの向きを示すため）</td>
+<td>点検 L2</td>
+</tr>
+<tr>
+<td>食い違い</td>
+<td>GM進行ガイド・タイムライン・手がかりマップ・真相・キャラクター表</td>
+<td>古いパスを直し、21分のヨネザワの「表示盤」を「操作盤」に、H04の題名をカードにそろえた。C2の変更に合わせ、P08・P13の経路、真相の「最終保証」の説明を直した。タイムライン§6の導入の順をHO読込→R02・R03に。GM進行ガイド§2に「質問はGMへこっそりどうぞ」の告知を戻した</td>
+<td>優先5・質問3・点検</td>
+</tr>
+<tr>
+<td>会場の成り立ち</td>
+<td>R01、GM進行ガイド§4、タイムライン§3、ヨネザワHO</td>
+<td>劇中はアガサのゲーム盤と割り切り、R01の会場の説明で一度突っ込ませた（アガサ「カメラもあちこちにあります」／ヨネザワ「カメラ多すぎだろ」／アガサ「校了会は記録が命です」。最後の声の台詞とは離した）。GMに、備品室の見え方の裁定と、記録機の質問への答えを足した。12〜13分のすれ違いの答えはアリスガワのM3の中身に触れるので、12分の操作が卓に出た後だけ言う、と分けた。ヨネザワHOに「部屋の名前は、受付でもらった下書きの地図の札で覚えていた」（E17の下書きの地図とつながる）</td>
+<td>質問10・優先6</td>
+</tr>
+<tr>
+<td>制作の言葉</td>
+<td>R02・R03・R06の題、R04・R06の冒頭、R01末尾のGMの行</td>
+<td>「本改訂で追加した場面」「v0.8の真相解説のまま…」「事件の事実は足していない」を削除。R01末尾のGMの行は、GM進行ガイド§2に同じ内容があるので削除</td>
+<td>優先7（質問2で採った場面の手直し）</td>
+</tr>
+<tr>
+<td>先出しの台詞</td>
+<td>R02・R03・モリミHO</td>
+<td>アヤツジ「……各自、準備しとけ」→「はいはい。20:40な」。R03のモリミ「…………」を削除し、HOの注を縮めた。R03のアリスガワの台詞から声の言葉を外した（言葉はE09で出る）</td>
+<td>優先8（L-02・L-05）</td>
+</tr>
+<tr>
+<td>OPと旧版の空気</td>
+<td>R01</td>
+<td>ルールの読み上げを短くした（魔女ゲームの説明、カードの細則、最後の照合先の話）。旧版の「役選びの5行」（旧版OP L11〜15）を冒頭に戻した。アガサの前置きへの野次は、旧版のヨネザワ「早く本題を言えよ」、アリスガワ「まあまあ凄いこといってるんだって～」、アガサ「天網恢恢疎にして漏らさず！　命短し恋せよ乙女！」、アヤツジ「世諺に飲まれてるな」を戻し、イサカは新版の「鍵を飲み込んだら密室になる、って話？」を残した（旧版の「鸚鵡よく言えども飛鳥を離れず～」は使っていない）。旧版のアガサ「そう、私達で最高のマダミスを紡ぐのよ！」とモリミ「莫逆の友が多くてよかったわね」の対は、5人が「やろうぜ」と決める所に置いた。作者の台詞は語を変えていない（話者名・全角空白・三点リーダーの数・ルビの括弧だけそろえた）。同じファイルの「かわいい役だ」は作者の表記「可愛い」にそろえた。「勝手に渡すのはなし」→「渡したり交換したりはなし」</td>
+<td>質問9・優先9</td>
+</tr>
+<tr>
+<td>最後のアガサ</td>
+<td>R06</td>
+<td>場面1は「消します。……入口は広いままにしたいけど」（先に折れてから、ひとこと未練）、場面5は「名作は読んでます。……読み直します」。場面3の「それは仕様——」「あ？」「——じゃなくて、直します。全部」は残し、言い訳→謝るの山はここだけにした。最後に場面6を足し、アガサ「……でも、良マダミスだったでしょ？」→ヨネザワ「クソマダミスだな」→アガサ「うるさーい！　良マダミスだー！」（後の2行は旧版 幕間ED L796・L798）と、旧版EDの役選びの5行（L816〜824）で閉じた</td>
+<td>質問8・質問9</td>
+</tr>
+<tr>
+<td>モリミへの一拍</td>
+<td>R06場面4</td>
+<td>アヤツジ「5人で殺しに行って、届いたのはお前のだけかよ。……納得いかねえ」／モリミ「納得しなくていいわ。私も、まだしてないもの」（報告の優先10 案1）</td>
+<td>質問6</td>
+</tr>
+<tr>
+<td>イサカの台詞</td>
+<td>R06場面5</td>
+<td>「これにあとミステリーなんて」の意味をイサカが聞き、アガサは「それは、劇中の私に聞いて」と答えず、イサカが「……だよな。聞き返せばよかったんだ」と引き受ける。台詞の意味は決めていない。HOの台詞は変えていない</td>
+<td>質問5（伏線として回収する側で解釈。決定記録）</td>
+</tr>
+<tr>
+<td>時計</td>
+<td>個人HO（アヤツジ・アリスガワ・モリミ・イサカ）の認識TL</td>
+<td>見出しの下に「（時刻はすべて基準時計。）」</td>
+<td>質問7</td>
+</tr>
+<tr>
+<td>文章の手直し</td>
+<td>R04</td>
+<td>長い台詞を割った（ヨネザワの通電、モリミの一撃）。通電の「届いていません」「届かなかった」の重なりを一つにした。アリスガワのくだりに「行動のXね」（真相§8の欄の名。ほかの4人と同じ形）。ヨネザワ「〜じゃねえか」→「〜だろ」、イサカ「〜だろ」→「〜じゃん」（口調の重なり）</td>
+<td>文章の担当 L-12・L-13・L-24・L-25</td>
+</tr>
+<tr>
+<td>文章の手直し</td>
+<td>モリミHO・アヤツジHO</td>
+<td>モリミHOの太字の説明を削り、一撃の念押し（「事故じゃない。押し合いの弾みでもない。」）を「腕に、台座の重さがまだ残っている。」に替えた。アヤツジHOに「作動の表示が出るまで、指を離せなかった」</td>
+<td>L-07・L-08・L-21</td>
+</tr>
+<tr>
+<td>文章の手直し</td>
+<td>共通HO §0・§5・§6、C0</td>
+<td>「勝利条件＝最後まで読むこと」を「個人HOの後半（▼の欄）に書いてある」に。§5の次の魔女の決め方と、§6の橋の決まりを、一行一つの箇条に割った（決まりの中身は同じ）</td>
+<td>L-15・L-16・L-17</td>
+</tr>
+<tr>
+<td>文章の手直し</td>
+<td>R01</td>
+<td>イサカ「凶器のカードを盗んだから私が昔殴ったことになる」の「殴った」を「やった」に（凶器の種類を先に言わない）</td>
+<td>L-27</td>
+</tr>
+</tbody>
+</table>
+<p>変えなかったもの：モリミの副勝利《五つの殺意》の文と回答用紙の例文（質問4は作者が検討中）。カードの「殺す目的で」などの、映像が意図を言い切る書き方（L-10。推理の経路に関わるので作者に未確認のまま）。R05のイサカ「変だろ。ちゃんと変だった」（読者役が一番うまい要約と言った台詞なので、口調合わせをしなかった）。H08の題名（L-18）。魔女ゲームの数値と合計時間（調整保留。タイムライン§6の162分も、テストプレイの後にそろえる）。作中アガサの地雷の言葉（作者の指定）。共通HO §10 の禁止事項の言い方（読者役5人とも最後まで「自分だけ」と信じていた）。</p>
+<hr />
+<h2 id="1">1. 変更点</h2>
+<h3 id="ho">共通資料（共通HO）</h3>
+<ul>
+<li>v0.8の共通ルール（PUBLIC_RULES、約2,500字）を、早見表つきの共通HOに組み直した。ルールの中身は変えていない</li>
+<li>追加：§0 早見表、§2 会場図（部屋の位置だけ。看板など物の位置は書かない）、§3 登場人物の紹介（秘密は書かない）、§4 共通の前提（C0と同じ内容）</li>
+<li>冒頭に「最初は§0〜§5と個人HOだけ読めばよい」を追加（仮想プレイ第1・3回を受けて）</li>
+<li>時計の説明を「基準時計＝記録機の時刻／補助時計＝舞台に表示される時刻」と言い換えた。ずれの量は書いていない</li>
+<li>「Xは嘘の印ではない」を太字で強調。塔に「安全地帯ではない」を追加</li>
+<li>「誰がどの番号を持っているかは全員に公開（本文は非公開）」を明記（仮想プレイ第2回で進行が止まったため。元のルールの意味は同じ）</li>
+<li>特殊カード10枚に重複して印刷されていた共通ルール文を、§8に一本化</li>
+<li>「根拠のない自白だけで自分への票を求めない」を、「『私に入れて』と頼むこと、根拠なく『私が犯人』と言うだけで票を集めることは禁止。自分の行動を話すのは自由」と言い換えた</li>
+<li>時間の目安に「回答記入タイム8分」を加え、合計を約175分＋休憩とした（仮）</li>
+</ul>
+<h3 id="ho5">個人HO（5人とも）</h3>
+<ul>
+<li>二人称の説明文（「あなたは〜」）を、<strong>その人物の一人称・口調の語り</strong>に書き直した。口調は旧版資料とv0.8の台詞に合わせた（アヤツジ・ヨネザワは乱暴、モリミは「〜わ」、アリスガワは素直、イサカは軽い）</li>
+<li>末尾に「特殊ルール（秘密）」「副勝利」「秘密」「知っていること」「知らないこと」「話し方の指針」「最初の一言」を箇条書きで整理</li>
+<li>秘密の主勝利の文面（「これはあなただけに与えられた特殊ルール」とA・Bの定義、禁止事項、末尾の匂わせの段落）は維持</li>
+<li>初期カードの控えは、カード本体と同じ文面に揃えた（機械照合で10枚とも一致）</li>
+<li>PC1アヤツジ：20:06の目撃を「廊下から扉の隙間越しに一瞬。部屋の中は見回していない」、20:13の目撃を「廊下から」と補った</li>
+<li>PC2アリスガワ：ヨネザワを見た時刻を「13分ごろ、廊下から」と補った（12分に備品室にいたことは未読のM3に関わるので書かない）。取り戻し方に申請の言い方の例を追加。自分の観察を交渉に使えることを明記</li>
+<li>PC3ヨネザワ：予約した部屋は草稿頼みで分からない、という原文の曖昧さを維持（「備品室」と書かない）。草稿8行は原文のまま</li>
+<li>PC4モリミ：「先ほどの布」の前提として「24分より前、布を抱えたイサカが編集室の近くにいた」を明記。R03で黙る理由の注記を追加。一撃の結果をHOに書かない点は維持</li>
+<li>PC5イサカ：R03の台詞が「初めて見つけたふり」であることを注記</li>
+</ul>
+<h3 id="m1m3">アリスガワの回収M1〜M3</h3>
+<ul>
+<li>三人称の記録を、アリスガワの一人称の記憶に書き直した。事実（06分の投入・11分の洗浄・12分の＋4）と、見ていないこと（口を付ける場面・空になる瞬間）は維持</li>
+<li>GM用に、渡す条件の表を頁の上に付けた</li>
+</ul>
+<h3 id="73">カード（73枚）</h3>
+<ul>
+<li>全カードを1〜3文・80字以内に短縮（平均122字→57字）。例外はE40（5人分のやり取りを1枚に束ねたカード）とC0〜C2（共通のまとめ記録）で、箇条書きに整えた</li>
+<li>推理の材料は事実として残し、結論にあたる文を削った（§3）</li>
+<li>初期カードの「【初期PC1 アヤツジの記録】本文の『あなた』はこの人物…」の前置きを、「【記録者：アヤツジ】」と本文中の人名に置き換えた（奪われても誰の記録か分かる）</li>
+<li>分類ラベルのうち、題名の一覧で答えが漏れる「非致命証拠」を「結果の記録」に、「死因」を「所見」に変えた（E21・E22・E36〜E39・E41・E46）</li>
+<li>呼び方を統一：アヤツジ側は「看板の点検票」、ヨネザワ側は「試験票」「通常点検の表紙」（「点検票」が二つの工作で重なっていたため）。H04の題名を「なくなった看板の点検票」に変更。H10の「表示盤」を「操作盤の灯」に</li>
+<li>H08：イサカを「彼」と書いていたのを直した（旧版ではイサカは女性）</li>
+<li>E10：「布が体を覆い、胸元の汚れが目立つ」を「体に布が掛かり、胸元の血のにじみが目立った」に</li>
+<li>C1：「表示24分の試験より後」に「（基準20分）」を足した</li>
+<li>特殊カード：効果を1行にし、共通ルールは共通HOへ</li>
+<li>カードID・枚数・各Dの解禁・題名（H04を除く）は変えていない</li>
+</ul>
+<h3 id="_1">読み合わせ</h3>
+<ul>
+<li>R01 OP：81発話を約60発話に整理。魔女ゲームの細かい説明は共通HOの早見表へ回し、人物のやり取りは残した</li>
+<li><strong>R02 劇中『19:50の校了会』を追加</strong>（追加場面）</li>
+<li><strong>R03 劇中『20:30の発見』を追加</strong>（追加場面）</li>
+<li>R04 真相解説：地の文6段落のGMの独演を、アガサの説明に5人が反応する会話に書き直した。説明の内容と順番は維持</li>
+<li>R05 ED：原文をほぼ維持。アヤツジだけ自分の地雷に触れる台詞が無かったので2行足した</li>
+<li><strong>R06 個別エピローグを追加</strong>（追加場面。勝敗に関係なく読める）</li>
+</ul>
+<h3 id="_2">回答用紙</h3>
+<ul>
+<li>5人分を整理。最終投票と真相回答が別でもよいことを冒頭に明記</li>
+<li>モリミの用紙に「いつ（時刻か順番）」「場所（行動した所と狙った所）」の見出しを追加。採点基準は変えていない</li>
+</ul>
+<h3 id="gm">GM向け</h3>
+<ul>
+<li>GM進行ガイドを新設（進行表・各段階の手順・決まった一言・裁定・採点の早見表・記録表の書式）</li>
+<li>「回答記入タイム（8分・私語なし・カード操作なし）」をD5の後に追加。C2の公開時刻（D5残り6分）は変えていない</li>
+<li>配布物一覧と配布タイミングを新設</li>
+</ul>
+<h2 id="2">2. 追加設定</h2>
+<p>推理の筋道を変える新事実は足していない。以下は、既存の事実と矛盾しない範囲で足した描写・補足。</p>
+<table>
+<thead>
+<tr>
+<th>追加したもの</th>
+<th>内容</th>
+<th>既存設定との関係</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>アヤツジの20:06の目撃</td>
+<td>廊下から扉の隙間越しに一瞬見ただけ。部屋の中は見回していない</td>
+<td>「看板の現物へは行かない」「東の被害者も見ない」と整合。看板の位置を知らない前提を守るための補足</td>
+</tr>
+<tr>
+<td>アヤツジ・アリスガワの13分の目撃</td>
+<td>どちらも「廊下から」</td>
+<td>位置表（編集室中心）と整合</td>
+</tr>
+<tr>
+<td>モリミの布の目撃</td>
+<td>24分より前、布を抱えたイサカが編集室の近くにいた</td>
+<td>イサカは「24分まで編集室と廊下で準備」。原文の「先ほどの布」の前提を明示しただけ</td>
+</tr>
+<tr>
+<td>R02の劇中場面</td>
+<td>19:50、編集室。アガサが「20:40に校了」「赤字はあとでXで回収」「東の校了室で最終確認、20:40までほぼ缶詰め」と言う。イサカが表紙の大きなXに触れ、5人がそれぞれ軽く不満を見せる</td>
+<td>19:50の到着、20:40の校了予定、表紙のX、各人の地雷と整合。個別の地雷の中身はE40まで伏せる。原文は「互いの計画を知らない」であり、不満の気配を見せることは矛盾しない</td>
+</tr>
+<tr>
+<td>R03の劇中場面</td>
+<td>20:30、ヨネザワがノックし「開いてるぞ」。イサカが「初めて見つけたふり」で皆を呼ぶ。全員が24分の声に触れる</td>
+<td>発見者・施錠なし・24分の声（C0・E09・E10）と整合。傷の詳しい様子は書かない（E01・E10の価値を残す）</td>
+</tr>
+<tr>
+<td>R06の個別エピローグ</td>
+<td>机の上のアガサが、難度表の作り直し・消した子を次作に出す・誤植の修正を約束。モリミは迷う理由のある役を頼み、イサカは『Xの悲劇』を貸す</td>
+<td>現実側の会話で、劇中事件の事実は足していない。モリミを共同作者にはしていない</td>
+</tr>
+<tr>
+<td>共通HOの人物紹介</td>
+<td>5人とアガサの人柄を一行ずつ</td>
+<td>旧版の人物資料とv0.8の「LEGACYの再読と口調の継承」に基づく。秘密は書かない</td>
+</tr>
+<tr>
+<td>共通HOの会場図</td>
+<td>東西南北の4室と廊下</td>
+<td>OP・C0の記述どおり。物の位置は書かない</td>
+</tr>
+<tr>
+<td>HOの心情描写</td>
+<td>アヤツジ「ヨネザワとはすぐ言い合い、モリミは一番構造を見てる」、アリスガワ「推理は得意じゃない」、モリミ「余りものに福」など</td>
+<td>旧版の人物資料・旧OPに基づく人柄の描写。事件の事実ではない</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3">3. 削除した記述</h2>
+<table>
+<thead>
+<tr>
+<th>場所</th>
+<th>削除した記述</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E21</td>
+<td>「東の旧配置図を現在の位置とする読み方は誤り」</td>
+<td>結論。事実（西の無人区画に落下）だけ残す</td>
+</tr>
+<tr>
+<td>E22</td>
+<td>「空のカップは飲み干した結果ではない」</td>
+<td>結論</td>
+</tr>
+<tr>
+<td>E25</td>
+<td>「殺す意図で行った直接攻撃であり、台座を単に持った場面ではない」「映像だけでは医学的な結果まで保証しない」</td>
+<td>「振り下ろし」で足りる。後者はGM向けの注意</td>
+</tr>
+<tr>
+<td>E41</td>
+<td>「これは事件内で保証する所見で、犯人名や時刻を単独で指定する紙ではない」</td>
+<td>GM向けの注意。共通前提C0に一般則がある</td>
+</tr>
+<tr>
+<td>E43</td>
+<td>「傷が即時致命だという所見と合わせれば、この画像の時点で死亡済みと判断できる」</td>
+<td>結論</td>
+</tr>
+<tr>
+<td>E18</td>
+<td>「アリスガワではない」「持ち物の色だけを人の識別に使った草稿とは食い違う」</td>
+<td>結論（イサカと書けば足りる）</td>
+</tr>
+<tr>
+<td>E12</td>
+<td>「薬の種類や必要量を推理する問題ではない」</td>
+<td>C0の「確定所見は現実の知識で覆す問題ではない」に含まれる</td>
+</tr>
+<tr>
+<td>E08</td>
+<td>Xの意味の説明</td>
+<td>C0・共通HOと重複</td>
+</tr>
+<tr>
+<td>E27</td>
+<td>「今この資料カードを所有している人と、事件当時に筒を持った人物を混同しない」</td>
+<td>共通HOの一般則に移した</td>
+</tr>
+<tr>
+<td>SP01〜SP10</td>
+<td>各カードの共通ルール文（約150字）</td>
+<td>共通HO §8に一本化</td>
+</tr>
+<tr>
+<td>初期カード</td>
+<td>「本文の『あなた』はこの人物。所有者が変わっても指す人物は変わらない」</td>
+<td>【記録者】ラベルと人名に置き換え</td>
+</tr>
+<tr>
+<td>OP</td>
+<td>魔女ゲームの得点・能力の細かい台詞</td>
+<td>共通HOの早見表へ</td>
+</tr>
+<tr>
+<td>各HO §9</td>
+<td>「調べる時の足場」などの節</td>
+<td>「話し方の指針」に統合</td>
+</tr>
+</tbody>
+</table>
+<p>意図的な違和感・伏線（H01の「更新済み印なし」、H05の「ずれ量は書いていない」、草稿Y1〜Y8の誤りとノイズ「試験験票」、E28の判定保留、E49の白紙帯）は削っていない。</p>
+<h2 id="4">4. 仮定・判断</h2>
+<table>
+<thead>
+<tr>
+<th>判断</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>正本はv0.8（CASE_V08_COMPLETE.md）とした</td>
+<td>PROJECT_MASTERが無く、ハーネスの引継ぎが00_WORKBENCHを正本に指定。WORKBENCHとv0.8は全文一致（機械照合）で、読み物として扱いやすいv0.8を主に使った</td>
+</tr>
+<tr>
+<td>出力フォルダ名を <code>_マダミス改訂_20261004</code> とした</td>
+<td>指示書の <code>*</code> はWindowsで使えない。他作品の担当チャットと同じ名前に揃えた</td>
+</tr>
+<tr>
+<td>ルール・得点・勝利条件・副勝利の採点基準は変えない</td>
+<td>指示書の「変えてよい」は文章表現・情報の出し方。ハーネスの引継ぎにも「新しい指示なしに事件・ルール・配布タイミングを再設計しない」とある</td>
+</tr>
+<tr>
+<td>回答記入タイム（8分）を足した</td>
+<td>情報の出し方・時間配分の調整で、得点や情報の中身は変えない。C2の公開時刻は作者の未決定事項なので動かさず、記入タイムは私語なしにして「C2後の議論時間」を実質的に延ばさないようにした</td>
+</tr>
+<tr>
+<td>「これはあなただけに与えられた特殊ルール」の一文を残す</td>
+<td>全員共通の条件をEDで明かす、作品の中心の仕掛け</td>
+</tr>
+<tr>
+<td>E40・C0〜C2はカードの長さの基準の例外とした</td>
+<td>E40は5人分の記録を束ねたカード、C0〜C2は共通のまとめ記録。分けると枚数・解禁・所有の仕組みが変わる</td>
+</tr>
+<tr>
+<td>カードIDと題名を維持した（H04のみ題名変更）</td>
+<td>題名の一覧から選ぶ仕組みのため。H04は「点検票」の混同を避けるために変えた</td>
+</tr>
+<tr>
+<td>真相解説・ED・個別エピローグ（R04〜R06）とM1〜M3はGM資料に置いた</td>
+<td>プレイヤー配布物に真相を混ぜない（指示書の禁止事項）</td>
+</tr>
+<tr>
+<td>イサカを女性として扱った</td>
+<td>旧版資料で「彼女」と書かれている。v0.8のH08だけが「彼」</td>
+</tr>
+<tr>
+<td>追加の個人HO（第2HO）は作らなかった</td>
+<td>本作はアリスガワの回収M1〜M3が既に段階的なHOの役割を持ち、他の4人は「結果を知らない」こと自体が仕掛け。新しい頁を足すと真相や結果に触れやすい</td>
+</tr>
+<tr>
+<td>R02で5人の不満を軽く見せた</td>
+<td>正本の記述は「互いの計画を知らない」で、怒りまで秘密とはしていない。E40（D4）で中身が明かされる前の伏線になり、仮想プレイでも動機の納得が早まった</td>
+</tr>
+</tbody>
+</table></div></main>
+<footer>2026-10-20 00:38 更新。原稿（05_完成版）から自動で作成。作成：Hermes【マダミス】claudeハーネス。</footer></div>
+<script>document.querySelectorAll('.side a').forEach(a=>a.addEventListener('click',()=>document.body.classList.remove('open')));
+document.addEventListener('click',e=>{if(document.body.classList.contains('open')&&!e.target.closest('.side')&&!e.target.closest('.menu'))document.body.classList.remove('open')});</script>
+</body></html>

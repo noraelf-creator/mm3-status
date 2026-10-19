@@ -1,0 +1,190 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>メイン推理の骨格｜マダミス3 超マダミスガールズX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f5f0;--paper:#fff;--ink:#1d1d1f;--sub:#6b6b72;--line:#e3dfd6;--red:#d0021b;--mag:#c2189b;--blue:#1d6fd6;--green:#178a4a;--soft:#fbf3f3}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.85 "Zen Kaku Gothic New","Yu Gothic UI","Meiryo",sans-serif}
+header.top{background:#000;color:#fff;padding:30px 24px 22px}
+header.top .in{max-width:1080px;margin:auto}
+header.top small{color:#ff5a6e;letter-spacing:.1em;font-weight:700}
+header.top h1{margin:4px 0 6px;font-size:30px;line-height:1.35}
+header.top h1 span{color:#ff2b47}
+header.top p{margin:0;color:#c9c9cf;font-size:14px}
+nav{position:sticky;top:0;z-index:5;background:rgba(0,0,0,.92);backdrop-filter:blur(6px)}
+nav .in{max-width:1080px;margin:auto;display:flex;gap:4px;overflow-x:auto;padding:0 16px}
+nav a{color:#ddd;text-decoration:none;padding:12px 16px;font-weight:700;white-space:nowrap;border-bottom:3px solid transparent}
+nav a:hover{color:#fff;border-color:#ff2b47}
+main{max-width:1080px;margin:auto;padding:10px 20px 80px}
+section.part{margin-top:46px}
+h2{font-size:26px;margin:0 0 6px;padding-bottom:6px;border-bottom:3px solid var(--ink)}
+h2 .no{color:var(--red);margin-right:8px}
+.lead{color:var(--sub);margin:4px 0 18px}
+h3{font-size:19px;margin:30px 0 10px;padding-left:10px;border-left:5px solid var(--red)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:14px 0;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.big{font-size:19px;line-height:1.9}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.st{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.st b{display:block;font-size:13px;color:var(--sub);font-weight:500}
+.st .v{font-size:17px;font-weight:700;margin:2px 0 4px}
+.st.ok{border-top:5px solid var(--green)}.st.wait{border-top:5px solid var(--mag)}.st.go{border-top:5px solid var(--blue)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:0 8px;border-radius:999px;margin-left:4px}
+.tag.ok{background:#e3f4ea;color:var(--green)}.tag.wait{background:#fbe5f4;color:var(--mag)}.tag.go{background:#e4eefb;color:var(--blue)}
+.tw{overflow-x:auto;margin:10px 0}
+table{border-collapse:collapse;width:100%;background:var(--paper);font-size:14.5px;line-height:1.7}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:#f1eee6;white-space:nowrap}
+table.cards td:first-child{font-weight:700;white-space:nowrap}
+table.acts td:first-child,table.sites td:first-child{font-weight:700;white-space:nowrap}
+.k{display:inline-block;font-size:12px;font-weight:700;border-radius:6px;padding:0 6px;margin:0 1px}
+.k1{background:var(--red);color:#fff}.km{background:#fff0c2;color:#8a5a00}.kw{background:#e8e4ff;color:#4b3cb0}.kn{background:#eee;color:#666}
+ol.chain{counter-reset:c;list-style:none;padding:0;margin:8px 0}
+ol.chain li{counter-increment:c;position:relative;padding:10px 12px 10px 52px;background:var(--paper);border:1px solid var(--line);border-radius:12px;margin:8px 0}
+ol.chain li::before{content:counter(c);position:absolute;left:12px;top:10px;width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;text-align:center;line-height:28px;font-weight:700}
+.time{display:grid;grid-template-columns:76px 1fr;gap:0;background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.time div{padding:9px 12px;border-bottom:1px solid var(--line)}
+.time .t{font:700 15px "IBM Plex Mono",Consolas,monospace;background:#faf8f3;color:var(--sub)}
+.time .death{background:var(--soft)}
+.time .t.death{color:var(--red)}
+.who{font-weight:700}
+.legend span{margin-right:12px;font-size:14px}
+.note{font-size:14px;color:var(--sub)}
+.secret{border:2px dashed var(--red);background:var(--soft)}
+.ex{background:#101014;color:#eee;border-radius:14px;padding:16px 18px}
+.ex b{color:#ff8c9b}
+.ex table{background:#18181d;color:#eee}.ex th{background:#26262c;color:#fff}.ex td,.ex th{border-color:#33333b}
+details{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:6px 14px;margin:10px 0}
+details summary{cursor:pointer;font-weight:700;padding:6px 0}
+code{font:13px "IBM Plex Mono",Consolas,monospace;background:#f1eee6;padding:0 4px;border-radius:4px}
+footer{max-width:1080px;margin:auto;padding:20px;color:var(--sub);font-size:13px}
+@media(max-width:640px){header.top h1{font-size:23px}h2{font-size:22px}body{font-size:15px}}
+
+body{display:block}
+.side{position:fixed;top:0;left:0;bottom:0;width:290px;background:#0b0b0d;color:#ddd;overflow-y:auto;padding:0 0 40px;z-index:20;border-right:1px solid #222}
+.side .brand{display:block;padding:18px 18px 14px;color:#fff;text-decoration:none;border-bottom:1px solid #222}
+.side .brand small{display:block;color:#ff5a6e;font-size:11px;letter-spacing:.1em;font-weight:700}
+.side .brand b{font-size:17px;line-height:1.4}
+.side .brand b span{color:#ff2b47}
+.side h4{margin:18px 18px 6px;font-size:12px;color:#8c8c95;letter-spacing:.08em}
+.side a.i{display:block;padding:6px 18px 6px 22px;color:#d6d6db;text-decoration:none;font-size:14px;line-height:1.5;border-left:3px solid transparent}
+.side a.i:hover{background:#18181c;color:#fff}
+.side a.i.on{background:#1d1d22;color:#fff;border-left-color:#ff2b47;font-weight:700}
+.wrap{margin-left:290px}
+.wrap header.top{padding:26px 28px 20px}
+.wrap main{padding:10px 28px 80px;max-width:1100px}
+.menu{display:none}
+.doc h1{font-size:26px;border-bottom:3px solid var(--ink);padding-bottom:6px}
+.doc h2{font-size:21px;border-bottom:2px solid var(--line);margin-top:34px}
+.doc h3{font-size:18px}
+.doc pre{background:#f1eee6;padding:12px;border-radius:10px;overflow-x:auto;font:14px/1.5 "IBM Plex Mono",Consolas,monospace}
+.doc table{display:block;overflow-x:auto}
+.doc blockquote{margin:12px 0;padding:8px 14px;border-left:4px solid var(--red);background:var(--soft)}
+.src{font-size:12px;color:var(--sub);margin:4px 0 14px}
+.story{border-radius:16px;padding:18px 20px;margin:16px 0;border:1px solid var(--line);background:var(--paper)}
+.story h3{margin-top:0}
+.story.s1{border-top:6px solid var(--blue)}.story.s2{border-top:6px solid var(--red)}.story.s3{border-top:6px solid var(--mag)}
+.layers{display:grid;gap:10px;margin:14px 0}
+.layer{border-radius:14px;padding:14px 16px;color:#fff}
+.layer b{font-size:17px}.layer.l1{background:#1d4f91}.layer.l2{background:#9b1022;margin:0 22px}.layer.l3{background:#7a1466;margin:0 44px}
+.imgs figure{margin:18px 0;background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.imgs img{display:block;width:100%;height:auto}
+.imgs figcaption{padding:8px 14px;font-size:14px;color:var(--sub)}
+@media(max-width:900px){
+ .side{transform:translateX(-100%);transition:transform .2s;width:84%;max-width:320px}
+ body.open .side{transform:none;box-shadow:0 0 0 100vmax rgba(0,0,0,.45)}
+ .wrap{margin-left:0}
+ .menu{display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:15;background:#000;color:#fff;padding:10px 14px}
+ .menu button{background:#ff2b47;color:#fff;border:0;border-radius:8px;font:700 15px inherit;padding:8px 12px}
+ .wrap header.top{padding:18px 16px}.wrap main{padding:6px 14px 60px}
+}
+</style></head><body>
+<nav class="side"><a class="brand" href="index.html"><small>作者用・真相を含む</small><b>マダミス3<br>超マダミスガールズ<span>X</span></b></a>
+<h4>まとめ</h4>
+<a class="i" href="index.html">いまの状況</a>
+<a class="i" href="structure.html">全体の骨格と3つの物語</a>
+<a class="i on" href="skeleton.html">メイン推理の骨格</a>
+<a class="i" href="cards.html">カードの役割（一覧）</a>
+<a class="i" href="witch.html">魔女ゲーム</a>
+<a class="i" href="images.html">画像（立ち絵）</a>
+<h4>プレイヤー配布</h4>
+<a class="i" href="doc-common-ho.html">共通HO</a>
+<a class="i" href="doc-ho-pc1.html">HO　PC1 アヤツジ</a>
+<a class="i" href="doc-ho-pc2.html">HO　PC2 アリスガワ</a>
+<a class="i" href="doc-ho-pc3.html">HO　PC3 ヨネザワ</a>
+<a class="i" href="doc-ho-pc4.html">HO　PC4 モリミ</a>
+<a class="i" href="doc-ho-pc5.html">HO　PC5 イサカ</a>
+<a class="i" href="doc-r01.html">R01 OP 校了会の始め方</a>
+<a class="i" href="doc-r02.html">R02 劇中 19:50の校了会</a>
+<a class="i" href="doc-r03.html">R03 劇中 20:30の発見</a>
+<a class="i" href="doc-answer-pc1.html">回答用紙　PC1 アヤツジ</a>
+<a class="i" href="doc-answer-pc2.html">回答用紙　PC2 アリスガワ</a>
+<a class="i" href="doc-answer-pc3.html">回答用紙　PC3 ヨネザワ</a>
+<a class="i" href="doc-answer-pc4.html">回答用紙　PC4 モリミ</a>
+<a class="i" href="doc-answer-pc5.html">回答用紙　PC5 イサカ</a>
+<a class="i" href="doc-howto.html">配布のしかた</a>
+<h4>カード（全文）</h4>
+<a class="i" href="doc-card-h.html">初期カード H01〜H10</a>
+<a class="i" href="doc-card-d1.html">D1　E01〜E10・SP01〜02</a>
+<a class="i" href="doc-card-d2.html">D2　E11〜E20・SP03〜04</a>
+<a class="i" href="doc-card-d3.html">D3　E21〜E30・SP05〜06</a>
+<a class="i" href="doc-card-d4.html">D4　E31〜E40・SP07〜08</a>
+<a class="i" href="doc-card-d5.html">D5　E41〜E50・SP09〜10</a>
+<a class="i" href="doc-card-c.html">共通カード C0〜C2</a>
+<a class="i" href="doc-m.html">アリスガワの頁 M1〜M3</a>
+<h4>GM資料</h4>
+<a class="i" href="doc-gm-guide.html">GM進行ガイド</a>
+<a class="i" href="doc-distribution.html">配布物一覧と配布タイミング</a>
+<a class="i" href="doc-r04.html">R04 真相解説</a>
+<a class="i" href="doc-r05.html">R05 ED そのXは私の地雷</a>
+<a class="i" href="doc-r06.html">R06 個別エピローグ</a>
+<a class="i" href="doc-answers-all.html">回答用紙（全PCの控え）</a>
+<a class="i" href="doc-truth.html">正本　真相</a>
+<a class="i" href="doc-timeline.html">正本　タイムライン</a>
+<a class="i" href="doc-characters.html">正本　キャラクター表</a>
+<a class="i" href="doc-cluemap.html">正本　手がかりマップ</a>
+<h4>制作の記録</h4>
+<a class="i" href="doc-project-master.html">PROJECT_MASTER（作品の入口）</a>
+<a class="i" href="doc-changelog.html">CHANGELOG（変更の履歴）</a>
+<a class="i" href="doc-decisions.html">作者の決定の記録（10/17〜）</a>
+</nav>
+<div class="wrap"><div class="menu"><button onclick="document.body.classList.toggle('open')">☰ 目次</button><span>マダミス3｜メイン推理の骨格</span></div>
+<header class="top"><div class="in"><small>作者用・真相を含む（プレイヤーに見せない）</small><h1>メイン推理の骨格</h1></div></header>
+<main>
+<p class="lead">出典：GM資料/正本「真相」「手がかりマップ」。</p>
+<div class="card big secret"><b>ひとことで：</b>5人全員が、作者アガサを<b>別々に</b>殺そうとした（共謀なし）。でも本当に殺したのは<b>モリミの一撃だけ</b>。ほかの4つの工作は、偶然が重なってどれも死因にならなかった。しかも全員、自分の工作の結果を確かめていない。<br>さらに秘密の主勝利は全員同じ「疑われたい（疑惑の単独最多）／魔女ゲームで負けたい（単独最下位）」。だから5人とも、犯人らしく見えることを喜ぶ。</div>
+
+<h3>二重の枠</h3><div class="tw"><table class=""><thead><tr><th>層</th><th>内容</th></tr></thead><tbody><tr><td>現実（机の上）</td><td>仲良し5人（アヤツジ・アリスガワ・ヨネザワ・モリミ・イサカ）が、友人アガサの新作マダミスを遊ぶ。アガサはGM。誰も犯罪者ではない</td></tr><tr><td>劇中（紙の中）</td><td>アガサが作った劇中事件『五つのX、ひとつの死』。同じ名前の劇中PC5人が、作者アガサの「校了会」に呼ばれ、それぞれ独立にアガサを殺そうとした</td></tr></tbody></table></div>
+
+<h3>今夜の流れ（基準時計）</h3>
+<p class="note">時計は2種類。<b>基準時計</b>＝録画・録音・廊下ログ。<b>補助時計</b>＝舞台の表示と展示卓。20:12から補助は4分進んでいる。会場は 東＝校了室、西＝展示区画、北＝編集室、南＝備品室。</p>
+<div class="time"><div class="t ">19:54</div><div class=""><span class="who">アガサ</span>　看板を東から<b>西へ移す</b>（旧図には反映されない）</div><div class="t ">19:58</div><div class=""><span class="who">アヤツジ</span>　南の備品室で、看板の制御盤に落下指令を仕込む。点検票を抜く</div><div class="t ">20:01</div><div class=""><span class="who">アガサ</span>　自分の声「確認はあとで。扉の前へ置いて」を録音（20:04に24分の再生を予約）</div><div class="t ">20:06</div><div class=""><span class="who">アリスガワ</span>　東の校了室で、黒いカップに毒を入れる</div><div class="t ">20:08</div><div class=""><span class="who">アヤツジ</span>　看板を作動 → <b>西の無人区画に落ちる</b>。音に驚いたアガサがカップを<b>全部こぼす</b></div><div class="t ">20:11</div><div class=""><span class="who">アリスガワ</span>　空のカップを洗う（空の理由は見ていない）</div><div class="t ">20:12</div><div class=""><span class="who">アリスガワ</span>　写真のため<b>補助時計を4分進める</b>（以後、補助＝基準＋4）</div><div class="t ">20:13</div><div class=""><span class="who">ヨネザワ</span>　備品室から展示卓の危険通電を「表示20:24」で予約 → 実際は<b>基準20:20</b>に動く</div><div class="t ">20:15</div><div class=""><span class="who">モリミ</span>　校了室へ。アガサはまだ生きて返事をしている</div><div class="t death">20:16</div><div class="death"><span class="who">モリミ</span>　<b>真鍮のベル台座で頭部を一撃。即死</b></div><div class="t ">20:17</div><div class=""><span class="who">モリミ</span>　台座を青い校正筒に入れて持ち出す</div><div class="t ">20:20</div><div class=""><span class="who">ヨネザワの予約</span>　通電が作動。もう死んでいて、体は卓から離れている（接触0）</div><div class="t ">20:24</div><div class=""><span class="who">録音</span>　アガサの声が廊下に流れる（生きた応答ではない）</div><div class="t ">20:26</div><div class=""><span class="who">イサカ</span>　胸元を刺す（すでに死亡。死後の傷）。布を掛け、体の向きを変える</div><div class="t ">20:30</div><div class=""><span class="who">イサカ・ヨネザワ</span>　「発見者」になる。胸の傷が目立ち、頭の傷が隠れている</div></div>
+
+<h3>五つの工作と、実際に起きたこと</h3><div class="tw"><table class="acts"><thead><tr><th>PC</th><th>実行したこと</th><th>隠蔽</th><th>本人が確かめていないこと</th><th>実際</th></tr></thead><tbody><tr><td>アヤツジ</td><td>19:58、南の備品室で可動看板の制御盤に落下指令を仕込む。20:08、同じ制御盤から作動</td><td>点検票を抜いて持ち帰る</td><td>看板がアガサに当たったか（旧図を信じ、現物も確認席も見ていない）</td><td>看板は19:54にアガサ自身が東→西へ移していた。西の無人区画に落ち、誰にも当たらない</td></tr><tr><td>アリスガワ</td><td>20:06、東の校了室で黒いカップへ毒（架空）を故意に入れる</td><td>20:11、空のカップを洗う。20:12、写真用に補助時計を4分進める</td><td>カップがなぜ空だったか。HOでは3つの行動の頁が「未読」</td><td>20:08の落下音に驚いたアガサが、口を付ける前に全量をトレーへこぼした。摂取なし</td></tr><tr><td>ヨネザワ</td><td>20:13、備品室の操作盤から、校了室の展示卓へ危険通電を「表示20:24」で予約。確認票を保存</td><td>通常点検の表紙へ差し替え</td><td>基準時刻での作動時刻、到達したか</td><td>補助時計が進んでいたため、作動は基準20:20。アガサは既に死亡し、体は接触位置から外れていた。接触0</td></tr><tr><td>モリミ</td><td>20:15、校了室へ。20:16、ベル台座で頭部を一撃</td><td>20:17、台座を青い校正筒に入れて持ち出す</td><td>相手が死んだか、一撃の前から致命的な状態だったか</td><td><b>この一撃が即時の死因</b></td></tr><tr><td>イサカ</td><td>20:25、布と刃物を持って校了室へ。20:26、胸元を刺す</td><td>20:27、刃物を印刷見本の束に隠し、布を掛け、体の向きを変える。20:30、ヨネザワと「発見者」になる</td><td>刺す前に相手が生きていたか（呼吸も呼びかけも確認していない）</td><td>アガサは既に死亡。胸の傷は死後の損傷</td></tr></tbody></table></div>
+
+<h3>偶然の連鎖（なぜ4つとも外れたか）</h3><ol class="chain"><li>19:54 アガサが看板を西へ移す → アヤツジは旧図のまま東を狙う</li><li>20:08 看板が西で落ちる → 音に驚いたアガサが毒入りカップを全量こぼす（アリスガワの工作が無効に）</li><li>20:12 アリスガワが写真のために補助時計を＋4 → ヨネザワの予約「表示20:24」が基準20:20に前倒し</li><li>20:16 モリミの一撃で即死 → 20:20の通電は死後・接触なし</li><li>20:24 アガサ本人が予約した録音が流れる → イサカは「まだ生きている」と思い込む</li><li>20:26 イサカが遺体を刺す → 布と体勢の変更で、発見時は胸の傷が目立ち、頭の傷が隠れる</li></ol>
+
+<h3>二十四分の声</h3><ul><li>20:01、アガサ本人が定型の台詞「確認はあとで。扉の前へ置いて」を録音</li><li>20:04、アガサ本人が20:24の再生を予約</li><li>20:24、廊下へ再生。生きた応答ではない。<b>モリミの偽装ではない</b></li><li>5人とも声を聞いたが、顔や応答は誰も見ていない</li></ul>
+
+<h3>犯人の決め方（正解ルート）</h3>
+<p class="note">「消去法で残ったからモリミ」にしない。一撃を積極的に証明し、ほかの4つが死因でないことも示す。</p><ol class="chain"><li><b>一撃の記録</b>：E25（16分、モリミが台座を頭部へ振り下ろす映像）、E34（扉側の別角度カメラ）、E44（基準時計に同期した録音機に16分の打撃音と倒れる音）</li><li><b>凶器と傷の一致</b>：E27（モリミの青い筒から血の付いた台座。縁の形状が頭部傷と照合可能）、E46（頭部傷は台座の縁に対応）</li><li><b>即死の確定所見</b>：E41・E46（頭部傷は即時致命傷。先行する致命傷・毒の作用なし。胸部傷は死後。通電の到達なし）</li><li><b>時刻</b>：E29（15分は生存）、E43（17分の定時画像に頭部傷と転倒位置、まだ胸部傷も布もない）</li><li><b>他の4工作の非致命</b>：看板＝E21・E36、毒＝E22・E37、通電＝E23＋E43＋E41、又はE38、刺傷＝E39、又はE24＋E43＋E46</li><li><b>最終保証</b>：C2（D5残り6分に全員へ公開）が、上の因果を組み立てられる生の記録を並べる。「犯人はモリミ」も「即時致命傷」のような結論の語も書かない（2026-10-17 作者の決定）。どの工作が死因かは、PLが記録から組み立てる</li></ol>
+
+<h3>推理の命題（P01〜P15）と、たどり着く道</h3>
+<details><summary>表をひらく（「又は」＝別の道、「＋」＝組み合わせが必要）</summary><div class="tw"><table class=""><thead><tr><th>命題</th><th>確定する事実</th><th>経路</th></tr></thead><tbody><tr><td>P01</td><td>アヤツジが殺害目的で落下工作を実行</td><td>E11 又は E31 又は C2</td></tr><tr><td>P02</td><td>落下地点は西、被害者は東で命中なし</td><td>E21 又は E36 又は C2</td></tr><tr><td>P03</td><td>アリスガワが殺害目的で毒を投入</td><td>E12 又は E32 又は C1</td></tr><tr><td>P04</td><td>飲物は全量流出し、摂取・作用なし</td><td>E22 又は E37 又は C2</td></tr><tr><td>P05</td><td>ヨネザワが殺害目的で通電を予約</td><td>E13 又は E33 又は C2</td></tr><tr><td>P06</td><td>通電は基準20分、死後かつ接触なし</td><td>E23＋E43＋E41 又は E38 又は C2</td></tr><tr><td>P07</td><td>モリミが16分に台座で直接攻撃</td><td>E25 又は E34＋E44 又は C2</td></tr><tr><td>P08</td><td>頭部の一撃が即時死因、先行する致死状態なし</td><td>E41 又は E46 又は C2（C2では、ほかの4工作が死因でないことからの消去法。「即時」はE41・E46）</td></tr><tr><td>P09</td><td>イサカが殺害目的で26分に刺した</td><td>E24＋E26 又は E35 又は C2</td></tr><tr><td>P10</td><td>刺した時点で既に死亡</td><td>E39 又は E24＋E43＋E46 又は C2</td></tr><tr><td>P11</td><td>24分の声は01分の録音（予約者・予約時刻まで言うにはE45かC2）</td><td>E20 又は E45 又は C2</td></tr><tr><td>P12</td><td>アリスガワの三欠落の回収</td><td>E12＋E14＋E15 又は E32＋E16＋E38 又は C1</td></tr><tr><td>P13</td><td>ヨネザワの草稿：誤り4・奇妙な真2・ノイズ1・普通の真1</td><td>E17＋E18＋E19＋E23＋E33＋E09＋E10＋C0 又は C1（Y7はE33かHOの「試験票」の表記で）</td></tr><tr><td>P14</td><td>Xの分類は原記録の照合で決まり、色・位置に答えはない</td><td>E42 又は C0＋E21＋E12＋E23＋E41＋E39</td></tr><tr><td>P15</td><td>情報配置の意図（早い私有と後半の照合を分ける）</td><td>E47＋E48 又は C0＋C1＋C2</td></tr></tbody></table></div></details>
+
+<h3>工作ごとの「やった証拠」と「死因ではない証拠」</h3><div class="tw"><table class=""><thead><tr><th>PC</th><th>実行（経路A）</th><th>実行（経路B）</th><th>非致命・結果（経路A）</th><th>非致命・結果（経路B）</th></tr></thead><tbody><tr><td>アヤツジ</td><td>E11</td><td>E31</td><td>E21</td><td>E36</td></tr><tr><td>アリスガワ</td><td>E12</td><td>E32</td><td>E22</td><td>E37</td></tr><tr><td>ヨネザワ</td><td>E13</td><td>E33</td><td>E23＋E43＋E41</td><td>E38</td></tr><tr><td>モリミ</td><td>E25</td><td>E34（＋E44）</td><td>非致命の経路は<b>作らない</b>。H07・E09・E28は一時的な疑問だけ</td><td>E41・E46で即死が確定</td></tr><tr><td>イサカ</td><td>E26</td><td>E35</td><td>E24＋E43（＋E46）</td><td>E39</td></tr></tbody></table></div>
+
+<h3>Xの二つの意味</h3><div class="tw"><table class=""><thead><tr><th>層</th><th>意味</th></tr></thead><tbody><tr><td>TLのX</td><td>「そのTL項目に未確認情報がある」印。それだけ。色・形・PC番号に意味はない。Xのない行にも誤りはある</td></tr><tr><td>殺意のX</td><td>作中アガサとのやり取りで出た言葉の多義性（未知数・削除・Error・万能伏線・Xの悲劇）。TLの答えを決める暗号ではない</td></tr></tbody></table></div><p class="note">各PCのTLの「X」が指す欄：</p><div class="tw"><table class=""><thead><tr><th>PC</th><th>欄</th><th>未確認の中身</th><th>埋まる答え</th></tr></thead><tbody><tr><td>アヤツジ</td><td>場所</td><td>看板は標的に届く場所だったか</td><td>西の無人区画。アガサは東で被弾なし</td></tr><tr><td>アリスガワ</td><td>行動</td><td>黒いカップに何をしたか</td><td>06分に毒を入れ、11分に洗い、12分に時計を進めた</td></tr><tr><td>ヨネザワ</td><td>時刻</td><td>表示20:24は基準で何時か</td><td>基準20:20。死亡16分より後</td></tr><tr><td>モリミ</td><td>結果</td><td>一撃で何が起きたか</td><td>一撃による即死。先行する致死状態なし</td></tr><tr><td>イサカ</td><td>人物（対象の生死）</td><td>刺した時、相手は生きていたか</td><td>同じアガサだが既に死亡。替え玉ではない</td></tr></tbody></table></div>
+
+<h3>五人の殺意（動機）</h3><p class="note">本気だけど、横から聞くと「それで殺すの!?」となる殺意。</p><div class="tw"><table class=""><thead><tr><th>PC</th><th>大切なもの</th><th>作中アガサの言葉（地雷）</th><th>殺意のX</th></tr></thead><tbody><tr><td>PC1 アヤツジ</td><td>攻略・実力・ルール・作者メタ</td><td>「PC1ってだいたい主人公か初心者向けでしょ。チュートリアル情報、多めに入れとけばいいじゃない」「Xって未知数なんだから、アヤツジもまだ未知数ってことで」。難度をPC番号だけで決めた表を出す</td><td>未知数／仮置き／PC番号メタ</td></tr><tr><td>PC2 アリスガワ</td><td>かわいい役・体験・大団円</td><td>お気に入りの子のラフに大きなX。「人気出すぎそうだから削除」「この子いなくても話進むから没でいいや」</td><td>削除／バツ印／キャラクター除外</td></tr><tr><td>PC3 ヨネザワ</td><td>文章・伏線・フェアなルール</td><td>出典付きの修正指摘に「そこは仕様」「最後にXで回収すれば伏線になる」「誤植じゃなくて演出」「未修正じゃなくて未回収」</td><td>誤答／修正印／Error／未修正</td></tr><tr><td>PC4 モリミ</td><td>制作・RP・選択に至る理由</td><td>「こんな感じでエモいの入れて、トロッコ問題あればいいでしょ」「RPなんてお涙頂戴でいいのよ」「意味分かんなくても最後にXで回収すればいい」</td><td>作者都合／万能プレースホルダー／後付け伏線</td></tr><tr><td>PC5 イサカ</td><td>ミステリー・構成・トリック</td><td>「これにあとミステリーなんて出来の悪い小説よ。」「カーもクイーンもクリスティーも最後に犯人当てるだけでしょ」「Xとか密室とか入れとけばミステリーになるって」</td><td>Xの悲劇／ミステリー記号／作品名／未知の犯人</td></tr></tbody></table></div>
+
+<h3>勝ち方</h3>
+<div class="card secret"><b>秘密の主勝利（全員共通・EDまで伏せる）</b><ul><li><b>主A</b>：最終累積疑惑点（途中5回×1点＋最終一票5点＋特殊効果）が<b>単独最多</b></li><li><b>主B</b>：5ラウンド後の魔女ゲーム累積ポイントが<b>単独最下位</b></li><li>同率は不成立。A・Bどちらか、又は両方で主勝利</li><li>条件を他人に直接見せる・読む・言い換えて教えるのは禁止。自己投票は禁止</li></ul></div>
+<p class="note">副勝利（主勝利より下の、正式な勝ち）：</p><div class="tw"><table class=""><thead><tr><th>PC</th><th>名前</th><th>達成条件</th></tr></thead><tbody><tr><td>アヤツジ</td><td>《ゲーム構造完全攻略》</td><td>5領域×2点で8/10以上。真犯人正解・ゲーム構造2点・メタ導線1点以上が必須</td></tr><tr><td>アリスガワ</td><td>《自分自身を完成させる》</td><td>D5の終わりまでにM1〜M3を全回収し、回答記入タイムに自己TLの4確認を回答用紙へ書く</td></tr><tr><td>ヨネザワ</td><td>《自分のTLを校正する》</td><td>草稿8行の分類7/8以上＋事実誤り4行（Y1〜Y4）の訂正すべて</td></tr><tr><td>モリミ</td><td>《五つの殺意》</td><td>他4人の時期・場所・方法・殺害意図を各2点で8/8</td></tr><tr><td>イサカ</td><td>《事件完全解決》</td><td>6領域×2点で10/12以上。犯人・方法・時刻は各2点必須</td></tr></tbody></table></div>
+
+<h3>主なミスリード（すべて解ける嘘）</h3><div class="tw"><table class=""><thead><tr><th>見え方</th><th>実際</th><th>解く記録</th></tr></thead><tbody><tr><td>24分に声がした＝まだ生きていた</td><td>01分の録音を04分に予約した再生</td><td>E20・E45・E44・C2</td></tr><tr><td>胸の刺し傷が目立つ＝刺されて死んだ</td><td>胸の傷は死後。頭の傷が即死</td><td>E39・E41・E46・E30・E43</td></tr><tr><td>作動済みの灯＝通電で死んだ</td><td>作動は基準20分（死後）、接触0</td><td>E23・E38・E43</td></tr><tr><td>カップが空＝飲んだ</td><td>落下音で全量こぼれた</td><td>E22・E37</td></tr><tr><td>旧図＝看板は東の確認席の上</td><td>19:54に西へ移設済み</td><td>E04・E21・E36</td></tr><tr><td>前屈み（H07）＝先に毒が効いていた</td><td>疲れていただけ。15分は普通に会話</td><td>E29・E41</td></tr><tr><td>判定保留（E28）＝どちらも非致命</td><td>精査待ちなだけ。精査でE41</td><td>E41・E46</td></tr><tr><td>ヨネザワの草稿Y3「アリスガワが布」</td><td>布を運んだのはイサカ</td><td>E18・C1</td></tr><tr><td>草稿Y5・Y6は時計が変なので誤記</td><td>奇妙だが正しい</td><td>E23・E09・C1</td></tr><tr><td>落下も毒も通電も刺傷もある＝共謀</td><td>5つは独立。相談の記録なし</td><td>E50・E40</td></tr></tbody></table></div>
+
+<h3>情報の波（投票ごとに見えてくること）</h3><div class="tw"><table class=""><thead><tr><th>投票</th><th>それまでに出る情報</th><th>目指す認識</th><th>まだ確定させない点</th></tr></thead><tbody><tr><td>V1</td><td>個人HO・初期H・C0・D0の会話</td><td>作者が殺された。各人に1〜2の不審な観察</td><td>他人の計画</td></tr><tr><td>V2</td><td>D1</td><td>傷・看板・杯・表示・筒・布に機会がある</td><td>殺害目的</td></tr><tr><td>V3</td><td>D2</td><td>アヤツジ・アリスガワ・ヨネザワの工作が見え始める。声の正体の入口</td><td>全員の工作、死因</td></tr><tr><td>V4</td><td>D3</td><td>モリミとイサカの直接攻撃。落下と毒は反証可能</td><td>致命性</td></tr><tr><td>V5</td><td>D4＋C1</td><td>5人独立の企図、他人の非致命を出して票を動かす</td><td>即死の最終照合</td></tr><tr><td>Final</td><td>D5＋C2</td><td>5工作を一つの基準TLに置き、殺害者を特定</td><td>（ED まで）秘密条件の共通性</td></tr></tbody></table></div></main>
+<footer>2026-10-20 00:38 更新。原稿（05_完成版）から自動で作成。作成：Hermes【マダミス】claudeハーネス。</footer></div>
+<script>document.querySelectorAll('.side a').forEach(a=>a.addEventListener('click',()=>document.body.classList.remove('open')));
+document.addEventListener('click',e=>{if(document.body.classList.contains('open')&&!e.target.closest('.side')&&!e.target.closest('.menu'))document.body.classList.remove('open')});</script>
+</body></html>
